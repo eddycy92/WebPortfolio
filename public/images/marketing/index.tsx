@@ -1,0 +1,1 @@
+export { default as Solutioneer } from './Solutioneer.jpg';

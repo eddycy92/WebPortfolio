@@ -1,0 +1,1 @@
+export { default as cehCertifiedEthicalHacker } from './cehCertifiedEthicalHacker.png';

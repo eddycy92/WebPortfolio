@@ -1,0 +1,1 @@
+export { default as professionalPhoto } from './professionalPhoto.jpg';

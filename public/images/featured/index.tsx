@@ -1,0 +1,1 @@
+export { default as compassmountain } from './compass-mountain.jpg';

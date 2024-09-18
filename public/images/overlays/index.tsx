@@ -1,0 +1,1 @@
+export { default as comingsoon } from './coming-soon.png';
