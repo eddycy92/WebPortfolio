@@ -1,4 +1,4 @@
-import { ChakraProps, ComponentWithAs, useBreakpointValue, useColorMode, useTheme, HTMLChakraProps, ResponsiveValue } from '@chakra-ui/react';
+import { ChakraProps, useBreakpointValue, useColorMode, useTheme, HTMLChakraProps, ResponsiveValue } from '@chakra-ui/react';
 
 // Extend ChakraProps to include 'as' and 'placement'
 interface ExtendedChakraProps extends HTMLChakraProps<'div'> {

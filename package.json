@@ -17,7 +17,7 @@
     "@popperjs/core": "^2.11.8",
     "autoprefixer": "^10.4.20",
     "bootstrap": "^5.3.3",
-    "framer-motion": "^11.5.4",
+    "framer-motion": "^11.5.5",
     "i": "^0.3.7",
     "normalize.css": "^8.0.1",
     "postcss": "^8.4.41",
