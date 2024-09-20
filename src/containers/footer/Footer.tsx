@@ -3,7 +3,7 @@ import { NavList, ImageC, Button } from "../../components/index";
 import MainMenu from '../../configuration/menus/MainMenu';
 import React from "react";
 import { FaLinkedin, FaGithub, FaHackerrank, FaLink } from 'react-icons/fa'; // React Icons
-import { Box, Icon, useToast, Flex, Input, Text, Heading, Grid, Link, Center } from '@chakra-ui/react'; // Chakra UI components
+import { Box, Icon, useToast, Flex, Input, Text, Heading, Grid, Link, Center, Image } from '@chakra-ui/react'; // Chakra UI components
 
 interface FooterProps {
   Footer_Style?: React.CSSProperties;
@@ -73,7 +73,7 @@ const Footer: React.FC<FooterProps> = ({
       p={5}
       style={Footer_Style}>
       <Flex 
-        justifyContent="space-between"  // Space between the sections
+        justifyContent="space-apo"  // Space between the sections
         alignItems="center"  // Align the sections vertically in the center
         maxW="7xl"
         mx="auto"
@@ -83,8 +83,8 @@ const Footer: React.FC<FooterProps> = ({
         
         {/* Left Section: Logo and Quick Links */}
         <Box>
-          <ImageC 
-            ImageC_Src="images/marketing/Solutioneer.png" 
+          <Image
+            src="images/marketing/Solutioneer.jpg" 
           />
         </Box>
 

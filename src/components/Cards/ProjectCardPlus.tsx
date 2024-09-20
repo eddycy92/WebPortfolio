@@ -1,76 +1,147 @@
-import { Badge, Button, Center, Flex, Heading, Image, Stack, Text, useColorModeValue, ChakraProps } from "@chakra-ui/react";
-import React from "react";
-import { Spinner } from "@chakra-ui/react";
-import useContentFetcher from "../../utils/ContentFetcher";
+import {
+  Badge,
+  Button,
+  Center,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
+
 
 interface ProjectCardPlusProps {
-  cardWidth?: ChakraProps["width"];
-  cardHeight?: ChakraProps["height"];
-  buttonTxt?: string;
-  fallbackImg?: string;
-  onPrimaryButtonClick?: () => void;
-  projectLink?: string;
-  projectDataPath: string;
-  isLocal?: boolean;
+  projectTitle: string; // Project title
+  projectSubtitle?: string; // Project subtitle, optional
+  projectDescription: string; // Project description
+  imageUrl: string; // Image URL for the project
+  badges?: string[]; // List of badges (e.g., tags or categories)
+  primaryButtonText?: string; // Text for the primary button (e.g., "Message" or "View")
+  primaryButtonLink?: string; // Link for the primary button
+  secondaryButtonText?: string; // Text for the secondary button (e.g., "Follow" or "More Info")
+  secondaryButtonLink?: string; // Link for the secondary button
 }
 
-const ProjectCardPlus: React.FC<ProjectCardPlusProps> = ({
-  cardWidth = { base: "100%", md: "600px" },
-  cardHeight = { base: "476px", md: "20rem" },
-  buttonTxt = "View Project",
-  fallbackImg = 'placeholder.png',
-  onPrimaryButtonClick,
-  projectLink = '#',
-  projectDataPath,
-  isLocal = true,
-}) => {
-  // Call hooks at the top level, unconditionally
-  const { data: projectData, isLoading, error } = useContentFetcher<any>(projectDataPath, isLocal);
-
-  // Conditional rendering logic comes AFTER hooks are called
-  if (isLoading) return <Spinner size="xl" />;
-  if (error) return <Text color="red.500">Error loading project data: {error.message}</Text>;
-
-  // Assuming 'projectData' contains 'images' property
-  const imageSrc = projectData?.images ? projectData.images[projectData.imageSrc] || fallbackImg : fallbackImg;
-
+export default function ProjectCardPlus({
+  projectTitle,
+  projectSubtitle,
+  projectDescription,
+  imageUrl,
+  badges = [],
+  primaryButtonText = 'Learn More', // Default text for primary button
+  primaryButtonLink = '#', // Default link for primary button
+  secondaryButtonText = 'Follow', // Default text for secondary button
+  secondaryButtonLink = '#', // Default link for secondary button
+}: ProjectCardPlusProps) {
   return (
-    <Center m={10}>
+    <Center py={6}>
       <Stack
         borderWidth="1px"
         borderRadius="lg"
-        w={cardWidth}
-        h={cardHeight}
-        direction={{ base: "column", md: "row" }}
-        bg={useColorModeValue("white", "gray.900")}
-        boxShadow={"2xl"}
+        w={{ sm: '100%', md: '540px' }}
+        height={{ sm: '476px', md: '20rem' }}
+        direction={{ base: 'column', md: 'row' }}
+        bg={useColorModeValue('white', 'gray.900')}
+        boxShadow={'2xl'}
         padding={4}
       >
-        <Flex flex={1} bg="gray.200">
-          <Image objectFit="cover" boxSize="100%" src={imageSrc} alt="Project Image" />
+        {/* Image Section */}
+        <Flex flex={1} bg="blue.200">
+          <Image
+            objectFit="cover"
+            boxSize="100%"
+            src={imageUrl}
+            alt={projectTitle}
+          />
         </Flex>
-        <Stack flex={1} p={4} justify="center" align="center">
-          <Heading fontSize="2xl">{projectData?.name || 'Project Name'}</Heading>
-          <Text fontWeight={600} color="gray.500" mb={4}>
-            {projectData?.tag || 'Web Application'}
+
+        {/* Content Section */}
+        <Stack
+          flex={1}
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          p={1}
+          pt={2}
+        >
+          {/* Title */}
+          <Heading fontSize={'2xl'} fontFamily={'body'}>
+            {projectTitle}
+          </Heading>
+
+          {/* Subtitle (Optional) */}
+          {projectSubtitle && (
+            <Text fontWeight={600} color={'gray.500'} size="sm" mb={4}>
+              {projectSubtitle}
+            </Text>
+          )}
+
+          {/* Project Description */}
+          <Text
+            textAlign={'center'}
+            color={useColorModeValue('gray.700', 'gray.400')}
+            px={3}
+          >
+            {projectDescription}
           </Text>
-          <Text textAlign="center" color={useColorModeValue("gray.700", "gray.400")}>
-            {projectData?.description || 'Project description goes here.'}
-          </Text>
-          <Stack align="center" direction="row" mt={6}>
-            {projectData?.badges?.map((badge: string, index: number) => (
-              <Badge key={index} px={2} py={1} fontWeight="400">
-                {badge}
-              </Badge>
-            ))}
+
+          {/* Badge List */}
+          {badges.length > 0 && (
+            <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+              {badges.map((badge, index) => (
+                <Badge
+                  key={index}
+                  px={2}
+                  py={1}
+                  bg={useColorModeValue('gray.50', 'gray.800')}
+                  fontWeight={'400'}
+                >
+                  {badge}
+                </Badge>
+              ))}
+            </Stack>
+          )}
+
+          {/* Buttons */}
+          <Stack
+            width={'100%'}
+            mt={'2rem'}
+            direction={'row'}
+            padding={2}
+            justifyContent={'space-between'}
+            alignItems={'center'}
+          >
+            <Button
+              as="a"
+              href={primaryButtonLink}
+              flex={1}
+              fontSize={'sm'}
+              rounded={'full'}
+              bg={'gray.200'}
+              _focus={{ bg: 'gray.200' }}
+            >
+              {primaryButtonText}
+            </Button>
+            <Button
+              as="a"
+              href={secondaryButtonLink}
+              flex={1}
+              fontSize={'sm'}
+              rounded={'full'}
+              bg={'blue.400'}
+              color={'white'}
+              boxShadow={
+                '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+              }
+              _hover={{ bg: 'blue.500' }}
+              _focus={{ bg: 'blue.500' }}
+            >
+              {secondaryButtonText}
+            </Button>
           </Stack>
-          <Button as="a" href={projectLink} onClick={onPrimaryButtonClick} bg="blue.400" color="white" _hover={{ bg: "blue.500" }}>
-            {buttonTxt}
-          </Button>
         </Stack>
       </Stack>
     </Center>
   );
-};
-
-export default ProjectCardPlus;
+}
