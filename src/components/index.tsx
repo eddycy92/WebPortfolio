@@ -1,10 +1,9 @@
+// src/components/index.tsx
 export { default as ListGroup } from "./ListGroup";
 export { default as Button } from "./button/Button";
 export { default as ChakraButton } from "./button/Chakra_Button";
 export { default as Carousel } from "./carousel/Carousel";
 export { default as X3Carousel } from "./carousel/X3Carousel";
-
-
 export { default as FeaturedCard } from "./featured/FeaturedCard";
 export { default as ProjectCardPlus } from "./Cards/ProjectCardPlus";
 export { default as ImageC } from "./imageC/ImageC";

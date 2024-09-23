@@ -31,8 +31,6 @@ const Theme = extendTheme({
     heading: `'Open Sans', sans-serif`, // Custom font for heading
     body: `'Raleway', sans-serif`,      // Custom font for body
   },
-
-
   styles: {
     global: {
       "html, body": {
@@ -51,9 +49,7 @@ const Theme = extendTheme({
         fontSize: "4xl",
         fontWeight: "bold",
         color: "brand.700", // Use your custom brand color
-        padding:"1rem",
-      
-
+        padding: "1rem",
       },
       h2: {
         fontSize: "3xl",
@@ -66,7 +62,7 @@ const Theme = extendTheme({
         color: "brand.700",
       },
       h4: {
-        fontSize: "x1", // "lg" is equivalent to the "large" size),
+        fontSize: "xl", // Fixed typo: "x1" -> "xl"
         fontWeight: "medium",
         color: "brand.700",
       },
@@ -75,10 +71,9 @@ const Theme = extendTheme({
         color: "gray.600",
         lineHeight: "tall",
         marginBottom: "1rem", // Spacing after paragraphs
-      },  
+      },
     },
   },
-
 });
 
 export default Theme;

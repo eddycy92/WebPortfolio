@@ -7,12 +7,12 @@ function Projects() {
   // Define your project data manually
   const projects = [
     {
-      title: 'Project Alpha',
-      subtitle: 'AI Solution',
-      description: 'An AI-powered solution to optimize workflows.',
+      title: 'Start Up - Website',
+      subtitle: 'for Ally Power Inc.',
+      description: 'Every great idea needs an online precense. Ally Power Inc is a hydrogen technology company that needed a website to showcase their ideas and create a platforn where they could share updates and progress on their mission to create clean energy.',
       imageUrl: '/images/projects/alpha.png',
       buttonLink: '/projects/alpha',
-      badges: ['test', 'python', 'TypeScript'],
+      badges: ['Cloudflare tunnel', 'Nginx', 'Wordpress'],
       pButtonText: 'View Project',
       pButtonLink: 'https://myproject.com',
       sButtonText: 'Star on GitHub',
