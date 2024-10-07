@@ -2,7 +2,7 @@
 
 import React, { lazy, Suspense } from 'react';
 import { Header, CertsCarousel, TechSCarousel } from "../containers";
-import { Box, Spinner } from '@chakra-ui/react'; // Chakra UI components
+import { Box, Spinner, Flex} from '@chakra-ui/react'; // Chakra UI components
 import { Helmet } from 'react-helmet'; // React Helmet for SEO and meta tags
 import MainMenu from "../configuration/menus/MainMenu";
 
@@ -24,15 +24,17 @@ function Home() {
         <Header />
         <Suspense fallback={<Spinner size="xl" />}>
           <CertsCarousel />
-          
-          {/* Lazy load heavier components
-          <Suspense fallback={<Spinner size="xl" />}>
-            <HomeFeatured />
-          </Suspense> */}
+          <Flex 
+          flex-basis={{base:"25%", md:"25%", lg:"25%", xl:"25%"}}
+            flexDirection={{base:"column", md:"row", lg:"row", xl:"row"}}
+          >
+            <TechSCarousel />
+
+          </Flex>
 
         
           <ProjectCarousel />
-          <TechSCarousel />
+
         </Suspense>
       </Box>
     </>

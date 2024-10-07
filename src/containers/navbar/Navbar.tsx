@@ -27,7 +27,8 @@ interface NavbarProps {
   pageURL?: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ heading = 'Solutioneer', pageURL = '/' }) => {
+const Navbar: React.FC<NavbarProps> = ({ 
+  heading = '', pageURL = '/' }) => {
   const { isOpen, onToggle } = useDisclosure(); // Handle mobile menu toggling
   const { colorMode, toggleColorMode } = useColorMode(); // Handle dark/light mode
 

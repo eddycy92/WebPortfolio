@@ -35,18 +35,18 @@ function TechSCarousel() {
   }
 
   return (
-    <Flex flexDir="column" p={2} my={20}>
+    <Flex flexDir="column" p={2} my={15} w={'50%'} h="50vh" overflow="hidden">
       <Heading textAlign="center" m={1} size={'xl'}>
         Technical Knowledge
       </Heading>
 
       {techSkills.length > 0 ? (
         techSkills.map((category, index) => (
-          <Box key={index} mb={8}>
-            <Heading size="md" my={5} textAlign="center">
+          <Box key={index} m={2}>
+            <Heading size="md" m={0} textAlign="center">
               {category.type}
             </Heading>
-            <X3CardCarousel
+            <X3CardCarousel                              
               X3CardCarousel_Children={category.skills.map((tech, idx) => (
                 <TechSkillCard
                   key={idx}
@@ -54,16 +54,13 @@ function TechSCarousel() {
                   ImageAlt={tech.imageAlt}
                   Name={tech.name}
                   ExpLength="" // Placeholder, can be replaced with actual experience length
-                  RelatedProjects={["Project 1", "Project 2"]} // Optional projects
-                  Width={{ base: "100%", sm: "55%", md: "55%", lg: "60%" }}
-                  Height={{ base: "100%", sm: "80%", md: "80%", lg: "90%" }}
                   ShowRelatedProjects={false}
                   ShowExp={false}
                   HeadingSize="xxs"
                   ShowImage={tech.ShowImage}
                 />
               ))}
-              columnsPerBreakpoint={{ base: 1, sm: 4, md: 4, lg: 4 }} // Adjust column layout
+              columnsPerBreakpoint={{ base: 2, sm: 2, md: 3, lg: 3 }} // Adjust column layout
             />
           </Box>
         ))

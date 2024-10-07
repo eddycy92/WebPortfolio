@@ -29,8 +29,8 @@ function TechSkillCard({
   Name = 'Skill Name',
   ExpLength = '10000 years',
   RelatedProjects = ['Project 1', 'Project 2'],
-  Width = { base: '100%', sm: '80&', md: '80%', lg: '100%' },
-  Height = { base: '100%', sm: '80&', md: '70%', lg: '70%' },
+  Width = { base: 'auto', sm: 'auto', md: 'auto', lg: 'auto' },
+  Height = { base: 'auto', sm: 'auto', md: 'auto', lg: 'auto' },
   ShowRelatedProjects = true,
   ShowExp = true,
   HeadingSize = 'sm',
@@ -45,20 +45,22 @@ function TechSkillCard({
     <Flex
       flexDirection="column"
       alignItems="center"
-      p={4}
+      p={2}
+      m={0}
       bg={useColorModeValue('white', 'gray.900')}
       borderWidth="1px"
       borderRadius="lg"
+      borderColor={useColorModeValue('gray.300', 'white')}
       w={Width}
       h={Height}
-      justifyContent="start"
       textAlign="center"
+      justifyContent="center"
     >
       <Heading size={HeadingSize} m={0} p={1}>
         {Name}
       </Heading>
       {ShowImage && (
-      <Image src={ImageSrc} borderRadius="lg" alt={ImageAlt} w="80%" p={4} />
+      <Image src={ImageSrc} borderRadius="lg" alt={ImageAlt} w="auto" h='auto' p={2} objectFit="cover"/>
       )}
       {ShowExp && (
         <Heading size="xs" mt={4}>

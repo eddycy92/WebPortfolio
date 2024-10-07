@@ -1,6 +1,6 @@
 import { Carousel } from "../../components/index";
 import React, { useEffect, useState } from "react";
-import * as people from "../../../public/images/me/index";
+import * as me from "../../../public/images/me/index";
 import { Grid, GridItem, Box, Heading, Text, useColorModeValue} from "@chakra-ui/react"; // Chakra UI components
 
 // Definition of the Header interface
@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({
 
   useEffect(() => {
     try {
-      const images = people as HeaderImagesType;
+      const images = me as HeaderImagesType;
 
       if (Object.keys(images).length === 0) {
         setLoadingError("No images found in the people folder.");
