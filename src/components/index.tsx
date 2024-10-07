@@ -13,3 +13,6 @@ export { default as X3CardCarousel } from "./carousel/X3CardCarousel";
 export { default as CertCard } from "./Cards/CertCard";
 export { default as TextImageV } from "./Cards/TextImageV";
 export { default as SocialProfile} from "./Cards/SocialProfile";
+export { default as RowTagButtons } from "./button/RowTagButtons";
+export { default as SideBar } from "./sidebars/SideBar"
+export { default as TechSkillCard } from "./Cards/TechSkillCard";

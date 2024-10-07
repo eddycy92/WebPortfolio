@@ -1,0 +1,467 @@
+{
+  "techSkills": [
+    {
+      "type": "Cybersecurity",
+      "skills": [
+        {
+          "name": "Wireshark",
+          "imageSrc": "./images/technologies/wireshark.png",
+          "imageAlt": "Wireshark Tool",
+          "details": "A powerful packet analyzer used for network troubleshooting, analysis, and communications protocol development."
+        },
+        {
+          "name": "Burp Suite",
+          "imageSrc": "./images/technologies/burpSuite.png",
+          "imageAlt": "Burp Suite Tool",
+          "details": "A web vulnerability scanner and penetration testing tool for detecting security flaws in web applications."
+        },
+        {
+          "name": "Zed Attack Proxy",
+          "imageSrc": "./images/technologies/zap.png",
+          "imageAlt": "ZAP Proxy Tool",
+          "details": "An open-source web application security scanner, used for finding vulnerabilities in web applications."
+        },
+        {
+          "name": "Kali Linux",
+          "imageSrc": "./images/technologies/kali.png",
+          "imageAlt": "Kali Linux",
+          "details": "A Debian-based Linux distribution designed for digital forensics and penetration testing."
+        },
+        {
+          "name": "Splunk",
+          "imageSrc": "./images/technologies/Splunk.png",
+          "imageAlt": "Splunk SIEM Tool",
+          "details": "A security information and event management (SIEM) tool used for searching, monitoring, and analyzing machine data."
+        },
+
+        {
+          "name": "UFED",
+          "imageSrc": "./images/technologies/ufed.png",
+          "imageAlt": "UFED, digital forensics",
+          "details": "Universal Forensic Extraction Device used for mobile device forensics."
+        },
+
+        {
+          "name": "JohnTheRipper",
+          "imageSrc": "./images/technologies/johntheripper.png",
+          "imageAlt": "JhonTheRipper",
+          "details": "A password cracking tool used in cybersecurity for testing the strength of passwords."
+        }
+      ]
+    },
+    {
+      "type": " Cloud, Networking & Infrastructure",
+      "skills": [
+
+        {
+          "name": "Nginx",
+          "imageSrc": "./images/technologies/nginx.png",
+          "imageAlt": "Nginx",
+          "details": "A popular web server and reverse proxy server known for its high performance and scalability."
+        },
+        {
+          "name": "Cloudflare Tunnel",
+          "imageSrc": "./images/technologies/Cloudflare.png",
+          "imageAlt": "Cloudflare Tunnel",
+          "details": "A service that allows secure connections to your server via the Cloudflare network without exposing your origin server."
+        },
+        {
+          "name": "Traefik",
+          "imageSrc": "./images/technologies/Traefik.png",
+          "imageAlt": "Traefik",
+          "details": "A modern reverse proxy and load balancer designed to deploy microservices with ease."
+        },
+        {
+          "name": "AWS",
+          "imageSrc": "./images/technologies/AWS.png",
+          "imageAlt": "AWS Services",
+          "details": "A wide array of cloud services offered by Amazon, including compute power, storage, and databases."
+        },
+        {
+          "name": "VNC",
+          "imageSrc": "./images/technologies/vnc.png",
+          "imageAlt": "VNC",
+          "details": "Virtual Network Computing is a graphical desktop-sharing system that uses the Remote Frame Buffer protocol to control another computer remotely."
+        },
+        {
+          "name": "EC2",
+          "imageSrc": "./images/technologies/EC2.png",
+          "imageAlt": "Amazon EC2",
+          "details": "Elastic Compute Cloud is a web service that provides resizable compute capacity in the cloud."
+        },
+        {
+          "name": "S3",
+          "imageSrc": "./images/technologies/s3.png",
+          "imageAlt": "Amazon S3",
+          "details": "Simple Storage Service is an object storage service that offers scalability, data availability, security, and performance."
+        },
+        {"name": "SSH",
+          "imageSrc": "./images/technologies/SSH.png",
+          "imageAlt": "SSH",
+          "details": "Secure Shell"
+        },
+        {
+          "name": "Route 53",
+          "imageSrc": "./images/technologies/route53.png",
+          "imageAlt": "Amazon Route 53",
+          "details": "A scalable Domain Name System (DNS) web service designed to route end users to internet applications."
+        },
+        {
+          "name": "Lightsail",
+          "imageSrc": "./images/technologies/lightsail.png",
+          "imageAlt": "Amazon Lightsail",
+          "details": "A virtual private server (VPS) service that offers a simple cloud platform with a flat rate pricing model."
+        },
+        {
+          "name": "Lxc",
+          "imageSrc": "./images/technologies/lxc.png",
+          "imageAlt": "Lxc",
+          "details": "Linux Containers is a lightweight, portable, and self-sufficient containerization solution."
+        },
+        {
+          "name": "RDS",  
+          "imageSrc": "./images/technologies/rds.png",
+          "imageAlt": "Amazon RDS",
+          "details": "Relational Database Service is a managed database service that makes it easy to set up, operate, and scale a relational database in the cloud."
+        },
+        {
+          "name":"Elastic Beanstalk",
+          "imageSrc":"./images/technologies/elasticBeanstalk.png",
+          "imageAlt":"Amazon Elastic Beanstalk",
+          "details":"A platform as a service (PaaS) that allows you to deploy and manage applications without worrying about the underlying infrastructure."
+        },
+        {
+          "name":"IAM",
+          "imageSrc":"./images/technologies/IAM.png",
+          "imageAlt":"Amazon IAM",
+          "details":"Identity and Access Management is a web service that helps you securely control access to AWS resources."
+        },
+        {
+          "name":"CloudWatch",
+          "imageSrc":"./images/technologies/cloudWatch.png",
+          "imageAlt":"Amazon CloudWatch",
+          "details":"A monitoring and observability service that provides data and actionable insights for AWS, hybrid, and on-premises applications."
+        },
+        {
+          "name":"Glacier",
+          "imageSrc":"./images/technologies/glacier.png",
+          "imageAlt":"Amazon Glacier",
+          "details":"A secure, durable, and extremely low-cost storage service for data archiving and long-term backup."
+        },
+        {
+          "name": "Authelia",
+          "imageSrc": "./images/technologies/authelia.png",
+          "imageAlt": "Authelia",
+          "details": "An open-source authentication and authorization server for securing applications and APIs."
+        },
+
+        {
+          "name": "Proxmox",
+          "imageSrc": "./images/technologies/proxmox.png",
+          "imageAlt": "Proxmox",
+          "details": "An open-source server virtualization environment for managing virtual machines and containers."
+        },
+        {
+          "name": "Docker",
+          "imageSrc": "./images/technologies/docker.png",
+          "imageAlt": "Docker",
+          "details": "A platform for developing, shipping, and running applications inside containers."
+        }
+      ]
+    },
+    {
+      "type": "Programming Languages",
+      "skills": [
+        {
+          "name": "Python",
+          "imageSrc": "./images/technologies/python.png",
+          "imageAlt": "Python",
+          "details": "A high-level programming language used for web development, data analysis, automation, and more."
+        },
+        {
+          "name": "C++",
+          "imageSrc": "./images/technologies/cplusplus.png",
+          "imageAlt": "C++",
+          "details": "A general-purpose programming language widely used for system software, game development, and high-performance applications."
+        },
+        {
+          "name": "JavaScript",
+          "imageSrc": "./images/technologies/JS.png",
+          "imageAlt": "JavaScript",
+          "details": "A versatile programming language used to create dynamic and interactive web content."
+        },
+        {
+          "name": "Bash",
+          "imageSrc": "./images/technologies/bash.png",
+          "imageAlt": "Bash",
+          "details": "A Unix shell and command language used for scripting and automating tasks in Linux and Unix environments."
+        },
+        {
+          "name": "PowerShell",
+          "imageSrc": "./images/technologies/powershell.png",
+          "imageAlt": "PowerShell",
+          "details": "A task automation and configuration management framework from Microsoft, consisting of a command-line shell and scripting language."
+        },
+        {
+          "name": "TypeScript",
+          "imageSrc": "./images/technologies/Typescript.png",
+          "imageAlt": "TypeScript",
+          "details": "A strongly-typed superset of JavaScript that adds static types to help catch errors early."
+        }
+      ]
+    },
+    {
+      "type": "Web Frameworks & Libraries",
+      "skills": [
+        {
+          "name": "Django",
+          "imageSrc": "./images/technologies/django.png",
+          "imageAlt": "Django",
+          "details": "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
+        },
+        {
+          "name": "React",
+          "imageSrc": "./images/technologies/react.png",
+          "imageAlt": "React",
+          "details": "A JavaScript library for building user interfaces, particularly single-page applications."
+        },
+        {
+          "name": "Chakra UI",
+          "imageSrc": "./images/technologies/chakra.png",
+          "imageAlt": "Chakra UI",
+          "details": "A modular and accessible component library for building React applications."
+        },
+        {
+          "name": "BootStrap",
+          "imageSrc": "./images/technologies/bootstrap.png",
+          "imageAlt": "BootStrap",
+          "details": "A popular CSS framework for building responsive and mobile-first websites."
+        },
+        {
+          "name": "Vite",
+          "imageSrc": "./images/technologies/Vite.png",
+          "imageAlt": "Vite",
+          "details": "A fast build tool and development server for modern web projects with a focus on speed and performance."
+        },
+        {
+          "name": "Wordpress",
+          "imageSrc": "./images/technologies/wordpress.png",
+          "imageAlt": "Wordpress",
+          "details": "A popular content management system (CMS) used for building websites and blogs."
+        }
+      ]
+    },
+    {
+      "type": "Databases & Data Management",
+      "skills": [
+        {
+          "name": "MySQL",
+          "imageSrc": "./images/technologies/sql.png",
+          "imageAlt": "MySQL",
+          "details": "A domain-specific language used for managing and manipulating relational databases."
+        },
+        {
+          "name": "Redis",
+          "imageSrc": "./images/technologies/Redis.png",
+          "imageAlt": "Redis",
+          "details": "An open-source, in-memory data structure store, used as a database, cache, and message broker."
+        },
+        {
+          "name": "MongoDB",
+          "imageSrc": "./images/technologies/mongodb.png",
+          "imageAlt": "MongoDB",
+          "details": "A NoSQL database program that uses JSON-like documents with schema."
+        },
+        {
+          "name": "PostgreSQL",
+          "imageSrc": "./images/technologies/postgresql.png",
+          "imageAlt": "PostgreSQL",
+          "details": "A powerful, open-source object-relational database system known for reliability and robustness."
+        },
+        {
+          "name": "MariaDB",
+          "imageSrc": "./images/technologies/mariadb.png",
+          "imageAlt": "MariaDB",
+          "details": "An open-source relational database management system, created by the original developers of MySQL."
+        },
+        {
+          "name": "SQLite",
+          "imageSrc": "./images/technologies/SQLite.png",
+          "imageAlt": "SQLite",
+          "details": "A C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine."
+        }
+      ]
+    },
+    {
+      "type": "CRM & Business Tools",
+      "skills": [
+        {
+          "name": "Salesforce",
+          "imageSrc": "./images/technologies/SalesForce.png",
+          "imageAlt": "Salesforce",
+          "details": "A cloud-based CRM platform for managing customer relationships and streamlining sales and marketing processes."
+        },
+        {
+          "name": "Lusha",
+          "imageSrc": "./images/technologies/lusha.jpeg",
+          "imageAlt": "Lusha",
+          "details": "A data enrichment tool that helps sales and marketing teams find contact information for leads."
+        },
+        {
+          "name": "ZoomInfo",
+          "imageSrc": "./images/technologies/zoominfo.png",
+          "imageAlt": "ZoomInfo",
+          "details": "A B2B contact database and sales intelligence platform for generating leads and expanding business networks."
+        },
+        {
+          "name": "LinkedIn Sales Navigator",
+          "imageSrc": "./images/technologies/salesNavigator.png",
+          "imageAlt": "LinkedIn Sales Navigator",
+          "details": "A sales tool that helps sales professionals find and engage with prospects on LinkedIn."
+        },
+        {
+          "name": "Zendesk",
+          "imageSrc": "./images/technologies/zendesk.png",
+          "imageAlt": "Zendesk",
+          "details": "A customer service software that helps businesses provide support to customers through multiple channels."
+        },
+        {
+          "name": "Jira",
+          "imageSrc": "./images/technologies/Jira.png",
+          "imageAlt": "Jira",
+          "details": "A project management and issue tracking tool used by software teams to plan, track, and release projects."
+        }
+      ]
+    },
+    {
+      "type": "Diciplines",
+      "ShowImage": false,
+      "skills": [
+        {
+          "name": "SIEM",
+          "details": "Security Information and Event Management systems collect and analyze security-related data from network devices.",
+          "ShowImage": false
+        },
+        {
+          "name": "Network Architecture",
+          "imageSrc": "./images/technologies/network-architecture.png",
+          "imageAlt": "Network Architecture",
+          "details": "The design of a computer network, including both the physical and logical layout of the infrastructure.",
+          "ShowImage": false
+        },
+        {
+          "name": "Vulnerability Scanning",
+          "imageSrc": "./images/technologies/vuln-scan.png",
+          "imageAlt": "Vulnerability Scanning",
+          "details": "Tools used to identify vulnerabilities in systems, networks, and applications to improve security posture.",
+          "ShowImage": false
+        },
+        {
+          "name": "OSINT",
+          "imageSrc": "./images/technologies/osint.png",
+          "imageAlt": "OSINT",
+          "details": "Open Source Intelligence tools are used to gather information from publicly available sources for cybersecurity or threat analysis.",
+          "ShowImage": false
+        },
+        {
+          "name": "Incident Response",
+          "imageSrc": "./images/technologies/incident-response.png",
+          "imageAlt": "Incident Response",
+          "details": "The process of responding to and managing security incidents, breaches, or cyber threats.",
+          "ShowImage": false
+        },
+        {
+          "name": "Threat Intelligence",
+          "imageSrc": "./images/technologies/threat-intel.png",
+          "imageAlt": "Threat Intelligence",
+          "details": "Information about potential or current threats to an organization's security, used to inform decision-making and incident response.",
+          "ShowImage": false
+        },
+        {
+          "name": "Security Operations",
+          "imageSrc": "./images/technologies/sec-ops.png",
+          "imageAlt": "Security Operations",
+          "details": "The ongoing, day-to-day activities involved in managing and responding to security incidents and threats.",
+          "ShowImage": false
+        },
+        {
+          "name": "Compliance Management",
+          "imageSrc": "./images/technologies/compliance.png",
+          "imageAlt": "Compliance Management",
+          "details": "Ensuring that an organization follows relevant laws, regulations, and standards related to cybersecurity and data protection.",
+          "ShowImage": false
+        },
+        {
+          "name": "Risk Assessment",
+          "imageSrc": "./images/technologies/risk-assessment.png",
+          "imageAlt": "Risk Assessment",
+          "details": "The process of identifying, analyzing, and evaluating potential risks to an organization's information assets.",
+          "ShowImage": false
+        },
+        {
+          "name": "Security Awareness",
+          "imageSrc": "./images/technologies/sec-awareness.png",
+          "imageAlt": "Security Awareness",
+          "details": "Educating employees and users about cybersecurity best practices, policies, and procedures to reduce security risks.",
+          "ShowImage": false
+        },
+        {
+          "name": "Data Privacy",
+          "imageSrc": "./images/technologies/data-privacy.png",
+          "imageAlt": "Data Privacy",
+          "details": "Protecting sensitive information and ensuring compliance with data protection laws and regulations.",
+          "ShowImage": false
+        },
+        {
+          "name": "Identity Management",
+          "imageSrc": "./images/technologies/identity-mgmt.png",
+          "imageAlt": "Identity Management",
+          "details": "The process of managing user identities, authentication, and access control in an organization.",
+          "ShowImage": false
+        },
+        {
+          "name": "Security Audits",
+          "imageSrc": "./images/technologies/sec-audit.png",
+          "imageAlt": "Security Audits",
+          "details": "Evaluations of an organization's security controls, policies, and procedures to identify weaknesses and ensure compliance with security standards.",
+          "ShowImage": false
+        },
+        {
+          "name": "Security Monitoring",
+          "imageSrc": "./images/technologies/sec-monitoring.png",
+          "imageAlt": "Security Monitoring",
+          "details": "Continuous monitoring of an organization's networks, systems, and applications to detect and respond to security incidents and threats.",
+          "ShowImage": false
+        },
+        {
+          "name": "Artificial Intelligence",
+          "imageSrc": "./images/technologies/ai.png",
+          "imageAlt": "Artificial Intelligence",
+          "details": "The simulation of human intelligence by machines, especially computer systems, for tasks like decision-making and speech recognition.",
+          "ShowImage": false
+        },
+        {
+          "name": "Prompt Engineering",
+          "imageSrc": "./images/technologies/prompt-engineering.png",
+          "imageAlt": "Prompt Engineering",
+          "details": "The art of crafting prompts to guide machine learning models, like GPT, to deliver more accurate or relevant results.",
+          "ShowImage": false
+        },
+        {
+          "name": "Automation Scripting",
+          "imageSrc": "./images/technologies/automation.png",
+          "imageAlt": "Automation Scripting",
+          "details": "Writing scripts to automate repetitive tasks, often using languages like Python, Bash, or PowerShell.",
+          "ShowImage": false
+        },
+        {
+          "name": "SSO Authentication",
+          "imageSrc": "./images/technologies/sso-auth.png",
+          "imageAlt": "SSO Authentication",
+          "details": "Single Sign-On (SSO) allows users to authenticate with multiple applications using one set of login credentials.",
+          "ShowImage": false
+        }
+      ]
+    }
+  ]
+}

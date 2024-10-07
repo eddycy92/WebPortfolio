@@ -1,0 +1,39 @@
+{
+    "certifications": [
+        {
+            "name": "Agile Development",
+            "provider": "LinkedIn",
+            "image": "/images/certifications/AgileDevelopment.png"
+        },
+        {
+            "name": "AWS Certified Cloud Practitioner (CCP)",
+            "provider": "Amazon Web Services",
+            "image": "/images/certifications/AmazonWebServicesAWSCertifiedCloudPractitionerCCP.png"
+        },
+        {
+            "name": "Mobile Forensics Fundamentals (CMFF)",
+            "provider": "Cellebrite",
+            "image": "/images/certifications/cellebrite-Mobile_Forensics_Fundamentals_CMFF.png"
+        },
+        {
+            "name": "Stakeholder Management",
+            "provider": "Pre-Sales Collective",
+            "image": "/images/certifications/Pre_Sales_Collective_PSC-Stakeholder_Management.png"
+        },
+        {
+            "name": "Value-Based Selling",
+            "provider": "Pre-Sales Collective",
+            "image": "/images/certifications/Pre_Sales_Collective_PSC-Value_Based_Selling.png"
+        },
+        {
+            "name": "Security+",
+            "provider": "CompTIA",
+            "image": "/images/certifications/CompTIA-Security_Plus.png"
+        },
+        {
+            "name": "CyberSecurity Professional Certificate",
+            "provider": "Google",
+            "image": "/images/certifications/Google-CyberSecurity_Professional_Certificate.png"
+        }
+    ]
+}

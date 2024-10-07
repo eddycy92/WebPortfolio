@@ -31,6 +31,29 @@ const Theme = extendTheme({
     heading: `'Open Sans', sans-serif`, // Custom font for heading
     body: `'Raleway', sans-serif`,      // Custom font for body
   },
+
+  fontSizes: {
+    xxs: "0.725rem", // Custom font size for xxs (10px)
+    xs: "0.875rem",   // Override for extra small (12px)
+    sm: "0.975rem",  // Override for small (14px)
+    md: "1.140rem",      // Default medium (16px)
+    lg: "1.205rem",  // Override for large (18px)
+    xl: "1.8rem",   // Override for extra large (20px)
+
+  },
+  components: {
+    Heading: {
+      sizes: {
+        xxs: { fontSize: "xxs" },
+        xs: { fontSize: "xs" },
+        sm: { fontSize: "sm" },
+        md: { fontSize: "md" },
+        lg: { fontSize: "lg" },
+        xl: { fontSize: "xl" },
+
+      },
+    },
+  },  
   styles: {
     global: {
       "html, body": {

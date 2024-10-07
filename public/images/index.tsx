@@ -12,3 +12,4 @@ export * as people from './people';
 export * as placeholders from './placeholders';
 export * as projects from './projects';
 export * as technologies from './technologies';
+

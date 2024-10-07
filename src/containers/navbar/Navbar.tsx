@@ -1,64 +1,146 @@
-// src/components/navbar/Navbar.tsx
-
 import React from 'react';
-import { Box, Flex, Link, IconButton, Image, Text, useDisclosure } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Link,
+  IconButton,
+  Image,
+  Text,
+  Button,
+  Stack,
+  Collapse,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  useDisclosure,
+  useColorModeValue,
+  useBreakpointValue,
+  Icon,
+  useColorMode,
+  Switch,
+} from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { NavList } from "../../components";
-import {Logo} from "../../configuration/WebsiteConfig";
-import MainMenu from "../../configuration/menus/MainMenu";
+import { Logo } from '../../configuration/WebsiteConfig';
 
 interface NavbarProps {
   heading?: string;
   pageURL?: string;
-  domain?: string;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ heading = 'Solutioneer', pageURL = '/' }) => {
   const { isOpen, onToggle } = useDisclosure(); // Handle mobile menu toggling
-  const menuItems = [
-    { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
-    { label: 'Projects', path: '/projects' },
-    { label: 'Articles', path: '/articles' },
-    { label: 'CheatSheets', path: '/cheatsheets' },
-    { label: 'Contact', path: '/contact' },
-    { label: 'Guides', path: '/guides' },
-  ]; // Static menu for now
+  const { colorMode, toggleColorMode } = useColorMode(); // Handle dark/light mode
 
   return (
-    <Box as="nav" bg="gray.800" color="white" px={4} py={2} shadow="md">
-      <Flex justify="space-between" align="center" maxW="7xl" mx="auto">
+    <Box>
+      <Flex
+        bg={useColorModeValue('white', 'gray.800')}
+        color={useColorModeValue('gray.600', 'white')}
+        minH={'60px'}
+        py={{ base: 2 }}
+        px={{ base: 4 }}
+        borderBottom={1}
+        borderStyle={'solid'}
+        borderColor={useColorModeValue('gray.200', 'gray.900')}
+        align={'center'}>
+        
         {/* Logo and Heading */}
-        <Flex align="center">
+        <Flex flex={{ base: 1 }} align="center">
           <Link href={pageURL} display="flex" alignItems="center">
             <Image src={Logo} alt="Logo" boxSize="40px" mr={2} />
-            <Text fontSize="xl" fontWeight="bold">{heading}</Text>
+            <Text fontFamily={'heading'} color={useColorModeValue('gray.800', 'white')}>
+              {heading}
+            </Text>
           </Link>
         </Flex>
 
-        {/* Desktop NavList */}
-        <Flex display={{ base: 'none', md: 'flex' }} align="center">
-          <NavList menuItems={menuItems} onSelectItem={(item) => console.log(item)} />
+        {/* Desktop Navigation Menu */}
+        <Flex display={{ base: 'none', md: 'flex' }} ml="auto" align="center">
+          <DesktopNav />
+          <Button as="a" variant="link" fontSize="sm" fontWeight={400} href="#" mr={4} ml={20}>
+            Sign In
+          </Button>
+          <Button as="a" color="white" bg="pink.400" fontSize="sm" fontWeight={600} href="#" _hover={{ bg: 'pink.300' }}>
+            Sign Up
+          </Button>
+          <Switch colorScheme="pink" ml={6} isChecked={colorMode === 'dark'} onChange={toggleColorMode} />
         </Flex>
 
         {/* Mobile Menu Toggle */}
-        <IconButton
-          display={{ base: 'flex', md: 'none' }}
-          onClick={onToggle}
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-          variant="ghost"
-          aria-label="Toggle Navigation"
-        />
+        <Flex flex={{ base: 1, md: 'none' }} justify={'flex-end'}>
+          <IconButton
+            onClick={onToggle}
+            icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
+            variant={'ghost'}
+            aria-label={'Toggle Navigation'}
+          />
+        </Flex>
       </Flex>
 
-      {/* Mobile NavList */}
-      {isOpen && (
-        <Box display={{ md: 'none' }} pb={4} mt={2}>
-          <NavList menuItems={menuItems} onSelectItem={(item) => console.log(item)} />
-        </Box>
-      )}
+      {/* Mobile Menu */}
+      <Collapse in={isOpen} animateOpacity>
+        <MobileNav />
+      </Collapse>
     </Box>
   );
 };
 
 export default Navbar;
+
+// Desktop Navigation Component
+const DesktopNav = () => {
+  const linkColor = useColorModeValue('gray.600', 'gray.200');
+  const linkHoverColor = useColorModeValue('gray.800', 'white');
+
+  return (
+    <Stack direction={'row'} spacing={4}>
+      {NAV_ITEMS.map((navItem) => (
+        <Link
+          key={navItem.label}
+          p={2}
+          href={navItem.href ?? '#'}
+          fontSize={'sm'}
+          fontWeight={500}
+          color={linkColor}
+          _hover={{
+            textDecoration: 'none',
+            color: linkHoverColor,
+          }}>
+          {navItem.label}
+        </Link>
+      ))}
+    </Stack>
+  );
+};
+
+// Mobile Navigation Component
+const MobileNav = () => {
+  return (
+    <Stack bg={useColorModeValue('white', 'gray.800')} p={4} display={{ md: 'none' }}>
+      {NAV_ITEMS.map((navItem) => (
+        <Link
+          key={navItem.label}
+          py={2}
+          href={navItem.href ?? '#'}
+          fontWeight={600}
+          color={useColorModeValue('gray.600', 'gray.200')}>
+          {navItem.label}
+        </Link>
+      ))}
+    </Stack>
+  );
+};
+
+// Navigation Items Data
+interface NavItem {
+  label: string;
+  href?: string;
+}
+
+const NAV_ITEMS: Array<NavItem> = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Articles', href: '/articles' },
+  { label: 'Guides', href: '/guides' },
+];

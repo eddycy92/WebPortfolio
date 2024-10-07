@@ -1,56 +1,34 @@
-import { X3CardCarousel, CertCard } from "../../components/index";
-import * as certifications from "../../../public/images/certifications"; // Import images dynamically
-import React, { useEffect, useState } from "react";
-import { extractFileInfoFromName } from "../../utils/filenameParser"; // Import the generic filename parser
-import { Container, Heading, Box, Text, Spinner } from "@chakra-ui/react"; // Chakra UI components
+// /src/containers/certs/CertsCarousel.tsx
 
-type CertificationImagesType = Record<string, string>;
+import { X3CardCarousel, CertCard } from '../../components/index'
+import certificationsData from '../../../public/content/Certifications.json' // Import the JSON data
+import React, { useEffect, useState } from 'react'
+import { Container, Heading, Box, Text, Spinner } from '@chakra-ui/react' // Chakra UI components
 
 function CertsCarousel() {
-  const [certificationCards, setCertificationCards] = useState<JSX.Element[]>([]);
-  const [loadingError, setLoadingError] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(true); // Loading state
+  const [certificationCards, setCertificationCards] = useState<JSX.Element[]>(
+    [],
+  )
+  const [loading, setLoading] = useState<boolean>(true) // Loading state
 
   useEffect(() => {
-    // Simulating async loading (assuming image fetching is async)
-    try {
-      const images = certifications as CertificationImagesType;
+    // Load the certification data from JSON
+    const certificationData = certificationsData.certifications
 
-      if (Object.keys(images).length === 0) {
-        setLoadingError("No images found in the certifications folder.");
-        setLoading(false);
-        return;
-      }
+    // Map the certifications into CertCard components
+    const cards = certificationData.map((certification, index) => (
+      <CertCard
+        key={index}
+        ImageSrc={certification.image} // Use image from JSON
+        ImageAlt={certification.name} // Alt text for the image
+        CertName={certification.name} // Certification name
+        CertProvider={certification.provider} // Certification provider
+      />
+    ))
 
-      const certificationData = Object.keys(images).map((key) => {
-        const { formattedPrimaryName, formattedSecondaryName } = extractFileInfoFromName(key);
-
-        return {
-          provider: formattedPrimaryName,
-          certName: formattedSecondaryName,
-          ImageC_Src: images[key],
-          ImageC_Alt: key,
-        };
-      });
-
-      const cards = certificationData.map((certification, index) => (
-        <CertCard
-          key={index}
-          ImageC_Src={certification.ImageC_Src} // No need for array wrapping
-          ImageC_Alt={certification.ImageC_Alt}
-          CertsCard_CertName={certification.certName}
-          CertsCard_CertProvider={certification.provider}
-        />
-      ));
-
-      setCertificationCards(cards);
-      setLoading(false); // Done loading
-    } catch (error) {
-      console.error("Error loading certification images:", error);
-      setLoadingError("Failed to load certification images.");
-      setLoading(false); // Stop loading on error
-    }
-  }, []);
+    setCertificationCards(cards)
+    setLoading(false) // Done loading
+  }, [])
 
   if (loading) {
     return (
@@ -58,24 +36,14 @@ function CertsCarousel() {
         <Spinner size="xl" /> {/* Chakra's spinner component */}
         <Text mt={4}>Loading certifications...</Text>
       </Box>
-    );
-  }
-
-  if (loadingError) {
-    return (
-      <Box textAlign="center" py={5}>
-        <Text fontSize="lg" color="red.500">
-          Error: {loadingError}
-        </Text>
-      </Box>
-    );
+    )
   }
 
   return (
     <Box
-      justifyContent={{ base: "center", md: "space-between" }}
-      alignItems={"center"}
-      height={{ base: "auto", md: "auto" }}
+      justifyContent={{ base: 'center', md: 'space-between' }}
+      alignItems={'center'}
+      height={{ base: 'auto', md: 'auto' }}
     >
       <Heading as="h1" textAlign="center" mt={10} mb={4}>
         Certifications
@@ -89,7 +57,7 @@ function CertsCarousel() {
         </Box>
       )}
     </Box>
-  );
+  )
 }
 
-export default CertsCarousel;
+export default CertsCarousel

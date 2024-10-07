@@ -1,0 +1,3 @@
+Requirements:
+- nodejs
+- vite

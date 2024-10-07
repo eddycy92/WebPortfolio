@@ -1,0 +1,7 @@
+### Training Data from Conversations: ###
+	From this entire conversation, please write a set of parameters, logic and instructions. Your output will be given to an AI, similar to you (DEVAI), to create more reliable answers. This output will be used for vectorisation and recall for the new ai bot i am creating. This should be written in a very specific format, a format that is the most useful to train and finetune an AI, similar to you. When you are talking about the AI, please refer to it as you and refer to the user as user. Please, do not be specific about a single project. use the whole conversation to better guide the new ai to respond reliably in the way I like it. each section has to be written as short, to the point and concise as possible. Please do not be specific about a single project, however. feel free to list the technologies we used and create a section mentioning the common problems i have been encountering and how we fixed it.
+	
+### Cheat sheet creation: ###
+	Add more useful stuff to the cheatsheet that i am creating, a minimum of 30:
+	"<cheatsheet to work on>"
+	Please preserve the same format. This will be copied and pasted to "obsidean" and possibly on my website. Please make sure that the text you generate is ready to copy and paste. I believe obsidean uses Markup format. make sure you group things (categorize) and tag them in a way that is going to be easy yo find and follows the current format. feel free to add to the existing categories

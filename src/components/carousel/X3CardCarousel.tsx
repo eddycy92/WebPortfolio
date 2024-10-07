@@ -1,12 +1,13 @@
 import React, { ReactNode, useMemo, useState, useEffect, useRef } from 'react';
-import {
-  Box,
-  Grid,
-  IconButton,
-  Flex,
-  useBreakpointValue,
-} from '@chakra-ui/react';
+import { Box, Grid, IconButton, Flex, useBreakpointValue } from '@chakra-ui/react';
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
+
+interface ColumnBreakpoints {
+  base?: number; // Number of columns on mobile
+  sm?: number;   // Number of columns on small screens
+  md?: number;   // Number of columns on medium screens
+  lg?: number;   // Number of columns on large screens
+}
 
 interface CardCarouselProps {
   interval?: number; // Interval between slides (in milliseconds)
@@ -17,10 +18,12 @@ interface CardCarouselProps {
   showControls?: boolean; // Show previous/next controls
   autoPlay?: boolean; // Enable auto-slide
   X3CardCarousel_Children?: ReactNode; // Children components (e.g., ProjectCard components)
+  columnsPerBreakpoint?: ColumnBreakpoints; // Allow passing column count dynamically per breakpoint
+  cardGap?: number; // Gap between cards
 }
 
 function X3CardCarousel({
-  interval = 10000, // Default interval of 5 seconds
+  interval = 10000, // Default interval of 10 seconds
   pauseOnHover = true, // Pause on hover by default
   transitionSpeed = 3000, // Default transition speed (in ms)
   resumeDelay = 2000, // Default resume delay after hover (2 seconds)
@@ -28,15 +31,14 @@ function X3CardCarousel({
   showControls = true, // Show controls by default
   autoPlay = true, // Enable auto-slide by default
   X3CardCarousel_Children, // Children components (e.g., ProjectCard components)
+  columnsPerBreakpoint = { base: 1, sm: 2, md: 3, lg: 4 }, // Default to 1-4 columns
+  cardGap=1,
 }: CardCarouselProps) {
   
-  const columns = useBreakpointValue({
-    base: 1, // 1 column on mobile
-    sm: 2,   // 2 columns on small screens (tablets)
-    md: 3,   // 3 columns on medium screens (desktop)
-    lg: 4,   // 4 columns on large screens
-  });
+  // Use `useBreakpointValue` to get column count dynamically based on screen size
+  const columns = useBreakpointValue(columnsPerBreakpoint);
 
+  // Convert children into an array
   const childrenArray = React.Children.toArray(X3CardCarousel_Children) as ReactNode[];
 
   // Group children into slides based on the number of columns
@@ -71,7 +73,6 @@ function X3CardCarousel({
     }
   }, [interval, autoPlay, currentSlide, totalSlides]);
 
-
   // Hover pause functionality
   const handleMouseEnter = () => {
     if (pauseOnHover && autoPlayRef.current) {
@@ -96,25 +97,24 @@ function X3CardCarousel({
   return (
     <Box
       maxW="7xl"
-      mx="auto"
-      pos="relative" // Control Position: static, fixed, absolute, relative, sticky, initial, inherit
-      overflow="hidden"
+      pos="relative"
+      overflow="hidden" // Ensure the carousel doesn't overflow
       onMouseEnter={handleMouseEnter} // Trigger pause on hover
       onMouseLeave={handleMouseLeave} // Resume auto-slide after hover
     >
       {/* Wrapper Box to handle translation */}
       <Box
         display="flex"
-        transition={`transform ${transitionSpeed}ms ease`} // Smooth transition for sliding
-        transform={`translateX(-${currentSlide * 100}%)`} // Translate slide based on current slide index
+        transition={`transform ${transitionSpeed}ms ease`}
+        transform={`translateX(-${currentSlide * 100}%)`} // Translate slide based on current index
       >
         {slides.map((slide, index) => (
           <Grid
             key={index}
-            templateColumns={`repeat(${columns}, 1fr)`} // Dynamically adjust the columns
-            gap={4}
-            flexShrink={0} // Prevent grid from shrinking, ensuring all slides have the same width
-            w="100%" // Each slide should take full width
+            templateColumns={`repeat(${columns}, 1fr)`} // Adjust columns based on breakpoints
+            gap={cardGap}
+            flexShrink={0} // Prevent grid from shrinking
+            w="100%" // Ensure the grid takes full width
           >
             {slide.map((child, childIndex) => (
               <Box key={childIndex} p={4}>

@@ -1,0 +1,131 @@
+{
+    "projects": [
+      {
+        "title": "Start Up - Website",
+        "subtitle": "for Ally Power Inc.",
+        "description": "Every great idea needs an online presence. Ally Power Inc is a hydrogen technology company that needed a website to showcase their ideas and create a platform where they could share updates and progress on their mission to create clean energy.",
+        "imageUrl": "/images/projects/AllyPowerIncWebsite.png",
+        "buttonLink": "/projects/alpha",
+        "badges": ["Cloudflare tunnel", "Nginx", "Wordpress"],
+        "pButtonText": "Visit Website",
+        "pButtonLink": "https://www.allypowerinc.com",
+        "sButtonText": "More Details",
+        "sButtonLink": "https://github.com/myproject",
+        "statusOverlay": "In Production",
+        "overlayColor": "green.500"
+
+      },
+      {
+        "title": "Accessible Solar Power",
+        "subtitle": "Solar Power Made Easy",
+        "description": "A complete guide to installing solar power for your home, packed with detailed calculators and tools to estimate savings, investment costs, and energy output. Designed to be modular and scalable. Built for everyone from those with little technical experience to those who want to dive deep into electrical engineering concepts. Whether you're just looking for a practical solution or you're a technical expert wanting to get into the nitty-gritty.",
+        "imageUrl": "/images/projects/solarpannels.jpg",
+        "buttonLink": "/projects/beta",
+        "badges": ["Python", "Solar Energy", "React"],
+        "pButtonText": "View Project",
+        "pButtonLink": "https://myproject.com",
+        "sButtonText": "Star on GitHub",
+        "sButtonLink": "https://github.com/myproject",
+        "statusOverlay": "In Progress",
+        "overlayColor": "yellow.400",
+        "proFeatures": ["Array Design", "Energy Output Estimation", "Cost Estimation", "ROI Calculator", "Cost per Panel sq. inch"]
+      },
+      {
+        "title": "Sodium Battery Research",
+        "subtitle": "Make Batteries with what you have",
+        "description": "A robust cloud infrastructure solution.",
+        "imageUrl": "/images/placeholders/placeholder.jpg",
+        "buttonLink": "/projects/gamma",
+        "badges": ["React", "Chakra UI", "TypeScript"],
+        "pButtonText": "View Project",
+        "pButtonLink": "https://myproject.com",
+        "sButtonText": "Star on GitHub",
+        "sButtonLink": "https://github.com/myproject"
+      },
+      {
+        "title": "Project Delta",
+        "subtitle": "Data Analysis",
+        "description": "A data analysis tool for businesses.",
+        "imageUrl": "/images/placeholders/placeholder.jpg",
+        "buttonLink": "/projects/delta",
+        "badges": ["Python", "Pandas", "Matplotlib"],
+        "pButtonText": "View Project",
+        "pButtonLink": "https://myproject.com",
+        "sButtonText": "Star on GitHub",
+        "sButtonLink": "https://github.com/myproject"
+      },
+      {
+        "title": "Project Epsilon",
+        "subtitle": "Machine Learning",
+        "description": "A machine learning model for predicting stock prices.",
+        "imageUrl": "/images/placeholders/placeholder.jpg",
+        "buttonLink": "/projects/epsilon",
+        "badges": ["Python", "TensorFlow", "Keras"],
+        "pButtonText": "View Project",
+        "pButtonLink": "https://myproject.com",
+        "sButtonText": "Star on GitHub",
+        "sButtonLink": "https://myproject.com"
+      },
+      {
+        "title": "Project Zeta",
+        "subtitle": "Web Development",
+        "description": "A web development project for a client.",
+        "imageUrl": "/images/placeholders/placeholder.jpg",
+        "buttonLink": "/projects/zeta",
+        "badges": ["React", "Node.js", "MongoDB"],
+        "pButtonText": "View Project",
+        "pButtonLink": "https://myproject.com",
+        "sButtonText": "Star on GitHub",
+        "sButtonLink": "https://myproject.com"
+      },
+      {
+        "title": "Project Eta",
+        "subtitle": "Mobile Development",
+        "description": "A mobile development project for a client.",
+        "imageUrl": "/images/placeholders/placeholder.jpg",
+        "buttonLink": "/projects/eta",
+        "badges": ["React Native", "Firebase", "Expo"],
+        "pButtonText": "View Project",
+        "pButtonLink": "https://myproject.com",
+        "sButtonText": "Star on GitHub",
+        "sButtonLink": "https://myproject.com"
+      },
+      {
+        "title": "Project Theta",
+        "subtitle": "Game Development",
+        "description": "A game development project for a client.",
+        "imageUrl": "/images/placeholders/placeholder.jpg",
+        "buttonLink": "/projects/theta",
+        "badges": ["Unity", "C#", "Blender"],
+        "pButtonText": "View Project",
+        "pButtonLink": "https://myproject.com",
+        "sButtonText": "Star on GitHub",
+        "sButtonLink": "https://myproject.com"
+      },
+      {
+        "title": "Project Iota",
+        "subtitle": "Blockchain",
+        "description": "A blockchain project for a client.",
+        "imageUrl": "/images/placeholders/placeholder.jpg",
+        "buttonLink": "/projects/iota",
+        "badges": ["Solidity", "Ethereum", "Web3.js"],
+        "pButtonText": "View Project",
+        "pButtonLink": "https://myproject.com",
+        "sButtonText": "Star on GitHub",
+        "sButtonLink": "https://myproject.com"
+      },
+      {
+        "title": "Project Kappa",
+        "subtitle": "Cybersecurity",
+        "description": "A cybersecurity project for a client.",
+        "imageUrl": "/images/placeholders/placeholder.jpg",
+        "buttonLink": "/projects/kappa",
+        "badges": ["Python", "Wireshark", "Nmap"],
+        "pButtonText": "View Project",
+        "pButtonLink": "https://myproject.com",
+        "sButtonText": "Star on GitHub",
+        "sButtonLink": "https://myproject.com"
+      }
+    ]
+  }
+  

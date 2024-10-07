@@ -1,7 +1,7 @@
 import { Carousel } from "../../components/index";
 import React, { useEffect, useState } from "react";
-import * as people from "../../../public/images/people";
-import { Grid, GridItem, Box, Heading, Text } from "@chakra-ui/react"; // Chakra UI components
+import * as people from "../../../public/images/me/index";
+import { Grid, GridItem, Box, Heading, Text, useColorModeValue} from "@chakra-ui/react"; // Chakra UI components
 
 // Definition of the Header interface
 interface HeaderProps {
@@ -55,23 +55,28 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <Grid
       templateColumns={{ base: "1fr", md: "1fr 1fr" }} // 1 column on mobile, 2 on pc
-      gap={10}  // Add spacing between columns
-      justifyContent={{ base: "center", md: "space-between" }} // Center on mobile, space between on pc
+      gap={5}
       textAlign={{ base: "left", md: "center" }} // Center text on mobile, left-align on pc
-      //Horizontal Alignment
-      placeItems="center"
+      placeItems="center"//Horizontal Alignment
       style={Grid_Style}
-
+      bg={useColorModeValue("gray.200","gray.500")}
+      w='90%'
+      m='auto'
+      border='md'
+      borderColor={useColorModeValue('gray.500', 'gray.200')}
+      borderRadius='md'
+      borderWidth={1}
+      p={5}
     >
       <GridItem>
-        <Heading as="h1" textAlign="center" size="xl" mb={4}>
+        <Heading as="h1" textAlign="center" size="xxl" mb={4} fontWeight={300}>
           Solutioneer
         </Heading>
-        <Text fontSize="lg" color="gray.600" mb={2}>
+        <Text fontSize="sm" color="gray.600" mb={2}>
           Welcome to Solutioneer, my personal sandbox of thoughts, projects,
           and the occasional sprinkle of madness.
         </Text>
-        <Text fontSize="lg" color="gray.600" mb={2}>
+        <Text fontSize="sm" color="gray.600" mb={2}>
           I'm a seasoned Technical Sales Professional, with a twist of
           Electrical Engineering, that stumbled over Software and
           Cybersecurity. Who knew that Software Sales, Sales Engineering, and
@@ -79,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({
           passions: Helping people find what they need and nerding out /
           showing off cutting edge technology.
         </Text>
-        <Text fontSize="lg" color="gray.600" mb={2}>
+        <Text fontSize="sm" color="gray.600" mb={2}>
           I am all about understanding how things work, dissecting them,
           reverse engineering them to then brew different explanations. If I
           talk to a whiskey sommelier, I would serve the information neat on
@@ -88,7 +93,7 @@ const Header: React.FC<HeaderProps> = ({
           non-alcoholic, ice-cream optional. Just like the alcohol, we can
           hold the technical gibberish.
         </Text>
-        <Text fontSize="lg" color="gray.600" mb={2}>
+        <Text fontSize="sm" color="gray.600" mb={2}>
           Solutioneer is more than a glossy portfolio showcasing my work. It's
           also a treasure trove of unfolding projects, brain-tingling blogs,
           and the occasional lightbulb moments that strike at 3 a.m. because
