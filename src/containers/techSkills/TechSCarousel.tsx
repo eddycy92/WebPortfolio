@@ -1,6 +1,8 @@
+// /src/containers/techSkills/TechSCarousel.tsx
+
 import React, { useEffect, useState } from "react";
 import { TechSkillCard, X3CardCarousel } from "../../components/index";
-import { Heading, Flex, Box } from "@chakra-ui/react";
+import { Heading, Flex } from "@chakra-ui/react";
 
 interface Tech {
   name: string;
@@ -35,17 +37,26 @@ function TechSCarousel() {
   }
 
   return (
-    <Flex flexDir="column" p={2} my={15} w={'50%'} h="50vh" overflow="hidden">
+    <Flex flexDir="column" p={10} w={'40%'}  overflow="hidden" gap={'xs'}>
       <Heading textAlign="center" m={1} size={'xl'}>
         Technical Knowledge
       </Heading>
 
       {techSkills.length > 0 ? (
         techSkills.map((category, index) => (
-          <Box key={index} m={2}>
-            <Heading size="md" m={0} textAlign="center">
+          <Flex 
+            key={index} 
+            m={1} p={0}
+            flexDir="column" 
+          >
+            {/* Category Heading */}
+            <Heading 
+              size="md" 
+              m={0} p={0} 
+              textAlign="center">
               {category.type}
             </Heading>
+
             <X3CardCarousel                              
               X3CardCarousel_Children={category.skills.map((tech, idx) => (
                 <TechSkillCard
@@ -53,19 +64,18 @@ function TechSCarousel() {
                   ImageSrc={tech.imageSrc}
                   ImageAlt={tech.imageAlt}
                   Name={tech.name}
-                  ExpLength="" // Placeholder, can be replaced with actual experience length
                   ShowRelatedProjects={false}
                   ShowExp={false}
                   HeadingSize="xxs"
                   ShowImage={tech.ShowImage}
                 />
               ))}
-              columnsPerBreakpoint={{ base: 2, sm: 2, md: 3, lg: 3 }} // Adjust column layout
+              columnsPerBreakpoint={{ base: 2, sm: 3, md: 3, lg: 3 }} // Adjust column layout
             />
-          </Box>
+          </Flex>
         ))
       ) : (
-        <div>No Tech Skills Found</div>
+        <Flex textAlign="center">No Tech Skills Found</Flex>
       )}
     </Flex>
   );

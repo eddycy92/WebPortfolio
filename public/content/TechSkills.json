@@ -52,7 +52,6 @@
     {
       "type": " Cloud, Networking & Infrastructure",
       "skills": [
-
         {
           "name": "Nginx",
           "imageSrc": "./images/technologies/nginx.png",
@@ -170,7 +169,7 @@
       ]
     },
     {
-      "type": "Programming Languages",
+      "type": "Programming Languages & Databases",
       "skills": [
         {
           "name": "Python",
@@ -207,6 +206,48 @@
           "imageSrc": "./images/technologies/Typescript.png",
           "imageAlt": "TypeScript",
           "details": "A strongly-typed superset of JavaScript that adds static types to help catch errors early."
+        },
+        {
+          "name": "MySQL",
+          "imageSrc": "./images/technologies/sql.png",
+          "imageAlt": "MySQL",
+          "details": "A domain-specific language used for managing and manipulating relational databases.",
+          "subType": "Databases & Data Management"
+        },
+        {
+          "name": "Redis",
+          "imageSrc": "./images/technologies/Redis.png",
+          "imageAlt": "Redis",
+          "details": "An open-source, in-memory data structure store, used as a database, cache, and message broker.",
+          "subType": "Databases & Data Management"
+        },
+        {
+          "name": "MongoDB",
+          "imageSrc": "./images/technologies/mongodb.png",
+          "imageAlt": "MongoDB",
+          "details": "A NoSQL database program that uses JSON-like documents with schema.",
+          "subType": "Databases & Data Management"
+        },
+        {
+          "name": "PostgreSQL",
+          "imageSrc": "./images/technologies/postgresql.png",
+          "imageAlt": "PostgreSQL",
+          "details": "A powerful, open-source object-relational database system known for reliability and robustness.",
+          "subType": "Databases & Data Management"
+        },
+        {
+          "name": "MariaDB",
+          "imageSrc": "./images/technologies/mariadb.png",
+          "imageAlt": "MariaDB",
+          "details": "An open-source relational database management system, created by the original developers of MySQL.",
+          "subType": "Databases & Data Management"
+        },
+        {
+          "name": "SQLite",
+          "imageSrc": "./images/technologies/SQLite.png",
+          "imageAlt": "SQLite",
+          "details": "A C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine.",
+          "subType": "Databases & Data Management"
         }
       ]
     },
@@ -252,47 +293,6 @@
       ]
     },
     {
-      "type": "Databases & Data Management",
-      "skills": [
-        {
-          "name": "MySQL",
-          "imageSrc": "./images/technologies/sql.png",
-          "imageAlt": "MySQL",
-          "details": "A domain-specific language used for managing and manipulating relational databases."
-        },
-        {
-          "name": "Redis",
-          "imageSrc": "./images/technologies/Redis.png",
-          "imageAlt": "Redis",
-          "details": "An open-source, in-memory data structure store, used as a database, cache, and message broker."
-        },
-        {
-          "name": "MongoDB",
-          "imageSrc": "./images/technologies/mongodb.png",
-          "imageAlt": "MongoDB",
-          "details": "A NoSQL database program that uses JSON-like documents with schema."
-        },
-        {
-          "name": "PostgreSQL",
-          "imageSrc": "./images/technologies/postgresql.png",
-          "imageAlt": "PostgreSQL",
-          "details": "A powerful, open-source object-relational database system known for reliability and robustness."
-        },
-        {
-          "name": "MariaDB",
-          "imageSrc": "./images/technologies/mariadb.png",
-          "imageAlt": "MariaDB",
-          "details": "An open-source relational database management system, created by the original developers of MySQL."
-        },
-        {
-          "name": "SQLite",
-          "imageSrc": "./images/technologies/SQLite.png",
-          "imageAlt": "SQLite",
-          "details": "A C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine."
-        }
-      ]
-    },
-    {
       "type": "CRM & Business Tools",
       "skills": [
         {
@@ -314,7 +314,7 @@
           "details": "A B2B contact database and sales intelligence platform for generating leads and expanding business networks."
         },
         {
-          "name": "LinkedIn Sales Navigator",
+          "name": "L.I. Sales Navigator",
           "imageSrc": "./images/technologies/salesNavigator.png",
           "imageAlt": "LinkedIn Sales Navigator",
           "details": "A sales tool that helps sales professionals find and engage with prospects on LinkedIn."
@@ -327,7 +327,7 @@
         },
         {
           "name": "Jira",
-          "imageSrc": "./images/technologies/Jira.png",
+          "imageSrc": "./images/technologies/jira.png",
           "imageAlt": "Jira",
           "details": "A project management and issue tracking tool used by software teams to plan, track, and release projects."
         }

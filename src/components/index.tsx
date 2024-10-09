@@ -16,3 +16,4 @@ export { default as SocialProfile} from "./Cards/SocialProfile";
 export { default as RowTagButtons } from "./button/RowTagButtons";
 export { default as SideBar } from "./sidebars/SideBar"
 export { default as TechSkillCard } from "./Cards/TechSkillCard";
+export { default as ArticlePreviewCard } from "./Cards/ArticlePreviewCard";

@@ -9,3 +9,4 @@ export { default as ProjectCarousel } from './projects/ProjectCarousel';
 export { default as TitleTextImage} from './featured/TitleTextImage';
 export { default as ArticleCont1} from './article/ArticleCont1';
 export { default as  TechSCarousel} from './techSkills/TechSCarousel';
+export { default as ArticleMiniCont} from './article/ArticleMiniCont';

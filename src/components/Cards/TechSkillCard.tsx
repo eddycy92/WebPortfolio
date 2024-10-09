@@ -1,26 +1,18 @@
 // /src/components/Cards/TechSkillCard.tsx
 
-import React from 'react'
 import { Flex, Image, Heading, useColorModeValue } from '@chakra-ui/react'
 import { RowTagButtons } from '../index'
 
 interface TechSkillCardProps {
-  // General Settings
-  ImageSrc?: string
-  ImageAlt?: string
-  Name?: string
-  ExpLength?: string
-  RelatedProjects?: string[]
-
-  // Styling
-  Width?: { base: string; sm: string; md: string; lg: string }
-  Height?: { base: string; sm: string; md: string; lg: string }
-  HeadingSize?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl'
-
-  // Optional:
-  ShowRelatedProjects?: boolean
-  ShowExp?: boolean
-  ShowImage?:boolean
+  ImageSrc?: string;
+  ImageAlt?: string;
+  Name?: string;
+  ExpLength?: string;
+  RelatedProjects?: string[];
+  HeadingSize?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  ShowRelatedProjects?: boolean;
+  ShowExp?: boolean;
+  ShowImage?: boolean;
 }
 
 function TechSkillCard({
@@ -29,47 +21,58 @@ function TechSkillCard({
   Name = 'Skill Name',
   ExpLength = '10000 years',
   RelatedProjects = ['Project 1', 'Project 2'],
-  Width = { base: 'auto', sm: 'auto', md: 'auto', lg: 'auto' },
-  Height = { base: 'auto', sm: 'auto', md: 'auto', lg: 'auto' },
   ShowRelatedProjects = true,
   ShowExp = true,
-  HeadingSize = 'sm',
-  ShowImage = true
-  
+  HeadingSize = 'xxs',
+  ShowImage = true,
 }: TechSkillCardProps) {
-  if (ShowRelatedProjects === false) {
-    RelatedProjects = []
-  }
+
+  const filteredProjects = ShowRelatedProjects ? RelatedProjects : [];
 
   return (
     <Flex
       flexDirection="column"
       alignItems="center"
-      p={2}
-      m={0}
+      justifyContent="center"
+      textAlign="center"
       bg={useColorModeValue('white', 'gray.900')}
       borderWidth="1px"
-      borderRadius="lg"
       borderColor={useColorModeValue('gray.300', 'white')}
-      w={Width}
-      h={Height}
-      textAlign="center"
-      justifyContent="center"
+      borderRadius="lg"
+      p={2} m={0}
+
+      // Card Size
+      w="100%" h="100%"
+      maxH="90px" minH="50px"
+      maxW="90px" minW="50px"
     >
-      <Heading size={HeadingSize} m={0} p={1}>
+      {/* Skill Name Heading */}
+      <Heading size={HeadingSize} m={0} p={0} >
         {Name}
       </Heading>
+
+      {/* Image, with responsive height adjustments */}
       {ShowImage && (
-      <Image src={ImageSrc} borderRadius="lg" alt={ImageAlt} w="auto" h='auto' p={2} objectFit="cover"/>
+        <Image
+          src={ImageSrc}
+          alt={ImageAlt}
+          p={1} m={0}          
+          w="90%" h="90%"
+          objectFit="contain"
+        />
       )}
+
+      {/* Experience length */}
       {ShowExp && (
-        <Heading size="xs" mt={4}>
+        <Heading size="xs" mt={2}>
           {`Experience: ${ExpLength}`}
         </Heading>
       )}
-      <RowTagButtons variant="solid" proFeatures={RelatedProjects} />
+
+      {/* Related Projects (Hidden if ShowRelatedProjects is false) */}
+      <RowTagButtons variant="solid" proFeatures={filteredProjects} />
     </Flex>
-  )
+  );
 }
 
-export default TechSkillCard
+export default TechSkillCard;

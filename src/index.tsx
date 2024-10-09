@@ -1,17 +1,12 @@
 // src/index.tsx
-
-import { ChakraProvider } from "@chakra-ui/react"
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App';
-import Theme from "./themes/Theme" // Import your custom theme
+import App from './App'; // App already has ChakraProvider
 
 const container = document.getElementById('root');
-const root = createRoot(container!);  // Create root
+const root = createRoot(container!);
 root.render(
   <React.StrictMode>
-    <ChakraProvider theme={Theme}> {/* Wrap your app in ChakraProvider and pass the custom theme */}
-      <App />
-    </ChakraProvider>
+    <App />  {/* No need for ChakraProvider here as it's in App.tsx */}
   </React.StrictMode>
 );

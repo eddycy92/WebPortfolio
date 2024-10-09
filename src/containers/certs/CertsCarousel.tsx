@@ -3,7 +3,8 @@
 import { X3CardCarousel, CertCard } from '../../components/index'
 import certificationsData from '../../../public/content/Certifications.json' // Import the JSON data
 import React, { useEffect, useState } from 'react'
-import { Container, Heading, Box, Text, Spinner } from '@chakra-ui/react' // Chakra UI components
+import { Container, Heading, Box, Text, Spinner,Flex } from '@chakra-ui/react' // Chakra UI components
+
 
 function CertsCarousel() {
   const [certificationCards, setCertificationCards] = useState<JSX.Element[]>(
@@ -32,18 +33,20 @@ function CertsCarousel() {
 
   if (loading) {
     return (
-      <Box textAlign="center" py={5}>
+      <Flex textAlign="center" py={5}>
         <Spinner size="xl" /> {/* Chakra's spinner component */}
         <Text mt={4}>Loading certifications...</Text>
-      </Box>
+      </Flex>
     )
   }
 
   return (
-    <Box
+    <Flex
       justifyContent={{ base: 'center', md: 'space-between' }}
       alignItems={'center'}
       height={{ base: 'auto', md: 'auto' }}
+      flexDirection="column"
+      gap={1}
     >
       <Heading as="h1" textAlign="center" mt={10} mb={4}>
         Certifications
@@ -52,11 +55,11 @@ function CertsCarousel() {
       {certificationCards.length > 0 ? (
         <X3CardCarousel X3CardCarousel_Children={certificationCards} />
       ) : (
-        <Box textAlign="center" py={10}>
+        <Flex textAlign="center" py={10}>
           <Text>No certifications available to display.</Text>
-        </Box>
+        </Flex>
       )}
-    </Box>
+    </Flex>
   )
 }
 

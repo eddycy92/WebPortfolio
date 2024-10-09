@@ -1,45 +1,47 @@
 import React, { ReactNode, useMemo, useState, useEffect, useRef } from 'react';
-import { Box, Grid, IconButton, Flex, useBreakpointValue } from '@chakra-ui/react';
+import { Box, IconButton, Flex, useBreakpointValue, Fade, SlideFade } from '@chakra-ui/react';
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 
 interface ColumnBreakpoints {
-  base?: number; // Number of columns on mobile
-  sm?: number;   // Number of columns on small screens
-  md?: number;   // Number of columns on medium screens
-  lg?: number;   // Number of columns on large screens
+  base?: number;
+  sm?: number;
+  md?: number;
+  lg?: number;
 }
 
 interface CardCarouselProps {
-  interval?: number; // Interval between slides (in milliseconds)
-  pauseOnHover?: boolean; // Pause auto-slide on hover
-  transitionSpeed?: number; // Speed of slide transitions (ms)
-  resumeDelay?: number; // Delay before resuming after hover (ms)
-  showIndicators?: boolean; // Show slide indicators (dots)
-  showControls?: boolean; // Show previous/next controls
+  interval?: number; // Auto-slide interval
+  pauseOnHover?: boolean; // Pause on hover
+  transitionSpeed?: number; // Slide transition speed
+  resumeDelay?: number; // Delay before resuming auto-slide
+  showIndicators?: boolean; // Show slide indicators
+  showControls?: boolean; // Show prev/next controls
   autoPlay?: boolean; // Enable auto-slide
-  X3CardCarousel_Children?: ReactNode; // Children components (e.g., ProjectCard components)
-  columnsPerBreakpoint?: ColumnBreakpoints; // Allow passing column count dynamically per breakpoint
+  X3CardCarousel_Children?: ReactNode; // Children components
+  columnsPerBreakpoint?: ColumnBreakpoints; // Dynamic column count per breakpoint
   cardGap?: number; // Gap between cards
+  transitionType?: 'slide' | 'fade'; // Transition type (slide or fade)
 }
 
 function X3CardCarousel({
-  interval = 10000, // Default interval of 10 seconds
-  pauseOnHover = true, // Pause on hover by default
-  transitionSpeed = 3000, // Default transition speed (in ms)
-  resumeDelay = 2000, // Default resume delay after hover (2 seconds)
-  showIndicators = true, // Show indicators by default
-  showControls = true, // Show controls by default
-  autoPlay = true, // Enable auto-slide by default
-  X3CardCarousel_Children, // Children components (e.g., ProjectCard components)
-  columnsPerBreakpoint = { base: 1, sm: 2, md: 3, lg: 4 }, // Default to 1-4 columns
-  cardGap=1,
+  interval = 10000,
+  pauseOnHover = true,
+  transitionSpeed = 3000,
+  resumeDelay = 2000,
+  showIndicators = true,
+  showControls = true,
+  autoPlay = true,
+  X3CardCarousel_Children,
+  columnsPerBreakpoint = { base: 1, sm: 2, md: 3, lg: 4 },
+  cardGap = 0,
+  transitionType = 'slide', // Default to "slide"
 }: CardCarouselProps) {
   
-  // Use `useBreakpointValue` to get column count dynamically based on screen size
+  // Dynamically set the number of columns per breakpoint
   const columns = useBreakpointValue(columnsPerBreakpoint);
 
   // Convert children into an array
-  const childrenArray = React.Children.toArray(X3CardCarousel_Children) as ReactNode[];
+  const childrenArray = React.Children.toArray(X3CardCarousel_Children);
 
   // Group children into slides based on the number of columns
   const slides = useMemo(() => {
@@ -50,15 +52,19 @@ function X3CardCarousel({
     return slideGroups;
   }, [childrenArray, columns]);
 
-  const [currentSlide, setCurrentSlide] = useState(0); // Track the current slide
+  // State for tracking the current slide
+  const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = slides.length;
-  const autoPlayRef = useRef<NodeJS.Timeout | null>(null); // Ref to control autoplay
-  const isHoveredRef = useRef(false); // Ref to track hover status
+  
+  // Refs to handle auto-play functionality
+  const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
+  const isHoveredRef = useRef(false);
 
+  // Move to the next/previous slide
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % totalSlides);
   const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
 
-  // Handle auto-slide logic
+  // Handle auto-slide
   useEffect(() => {
     if (autoPlay) {
       autoPlayRef.current = setInterval(() => {
@@ -73,11 +79,11 @@ function X3CardCarousel({
     }
   }, [interval, autoPlay, currentSlide, totalSlides]);
 
-  // Hover pause functionality
+  // Pause/resume on hover
   const handleMouseEnter = () => {
-    if (pauseOnHover && autoPlayRef.current) {
+    if (pauseOnHover) {
       isHoveredRef.current = true;
-      clearInterval(autoPlayRef.current); // Stop auto-slide on hover
+      if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     }
   };
 
@@ -90,52 +96,61 @@ function X3CardCarousel({
             nextSlide();
           }, interval);
         }
-      }, resumeDelay); // Delay resuming auto-slide after hover
+      }, resumeDelay);
     }
   };
 
   return (
-    <Box
+    <Flex
       maxW="7xl"
       pos="relative"
-      overflow="hidden" // Ensure the carousel doesn't overflow
-      onMouseEnter={handleMouseEnter} // Trigger pause on hover
-      onMouseLeave={handleMouseLeave} // Resume auto-slide after hover
+      overflow="hidden"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      {/* Wrapper Box to handle translation */}
-      <Box
-        display="flex"
-        transition={`transform ${transitionSpeed}ms ease`}
-        transform={`translateX(-${currentSlide * 100}%)`} // Translate slide based on current index
-      >
-        {slides.map((slide, index) => (
-          <Grid
-            key={index}
-            templateColumns={`repeat(${columns}, 1fr)`} // Adjust columns based on breakpoints
-            gap={cardGap}
-            flexShrink={0} // Prevent grid from shrinking
-            w="100%" // Ensure the grid takes full width
-          >
-            {slide.map((child, childIndex) => (
-              <Box key={childIndex} p={4}>
-                {child}
-              </Box>
-            ))}
-          </Grid>
-        ))}
-      </Box>
+      {/* Wrapper to translate the carousel */}
+      {transitionType === 'slide' ? (
+        <Flex
+          transition={`transform ${transitionSpeed}ms ease`}
+          transform={`translateX(-${currentSlide * 100}%)`}
+          w="100%"
+          mb={4}
+        >
+          {slides.map((slide, index) => (
+            <Flex key={index} gap={cardGap} flexShrink={0} w="100%" >
+              {slide.map((child, childIndex) => (
+                <Flex key={childIndex} p={2} m={0} w="100%" justify={"center"}>
+                  {child}
+                </Flex>
+              ))}
+            </Flex>
+          ))}
+        </Flex>
+      ) : (
+        slides.map((slide, index) => (
+          <Fade in={currentSlide === index} key={index} style={{ width: '100%' }}>
+            <Flex gap={cardGap} flexShrink={0} w="100%" left={0}>
+              {slide.map((child, childIndex) => (
+                <Flex key={childIndex} p={2} m={0} w="100%">
+                  {child}
+                </Flex>
+              ))}
+            </Flex>
+          </Fade>
+        ))
+      )}
 
       {/* Indicators */}
       {showIndicators && (
-        <Flex justify="center" mt={4}>
+        <Flex justify="center" pos="absolute" bottom={0} w="100%">
           {slides.map((_, index) => (
             <Box
               key={index}
-              h={3}
-              w={3}
+              h={2}
+              w={2}
               borderRadius="50%"
               bg={index === currentSlide ? 'teal.400' : 'gray.300'}
-              mx={2}
+              m={1}
               cursor="pointer"
               onClick={() => setCurrentSlide(index)}
             />
@@ -151,9 +166,8 @@ function X3CardCarousel({
             icon={<ArrowBackIcon />}
             pos="absolute"
             top="50%"
-            left={2}
+            left={0}
             transform="translateY(-50%)"
-            zIndex={2}
             onClick={prevSlide}
           />
           <IconButton
@@ -161,14 +175,13 @@ function X3CardCarousel({
             icon={<ArrowForwardIcon />}
             pos="absolute"
             top="50%"
-            right={2}
+            right={0}
             transform="translateY(-50%)"
-            zIndex={2}
             onClick={nextSlide}
           />
         </>
       )}
-    </Box>
+    </Flex>
   );
 }
 
