@@ -56,7 +56,9 @@ function Projects() {
     <>
       <Helmet>
         <title>Solutioneer - Projects</title>
-        <meta name="description" content="Explore the projects built using various technologies." />
+        <meta 
+          name="description" 
+          content="Explore the projects built using various technologies." />
       </Helmet>
 
       <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')} display="flex" flexDirection={{ base: 'column', md: 'row' }}>

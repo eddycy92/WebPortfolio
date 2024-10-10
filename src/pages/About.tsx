@@ -1,12 +1,17 @@
 // src/pages/About.tsx
 
-import React from 'react';
-import  {TitleTextImage}  from '../containers/index';
-import {List, ListItem, Text, Box, Heading, } from '@chakra-ui/react';
-import { H_Align, V_Align } from '../utils/Alignment';
+import  {TitleTextImage, }  from '../containers/index';
+import {IndProject,} from '../pages/PagesIndex'
+import {List, ListItem, Text, Box, Heading, Flex   } from '@chakra-ui/react';
+
 function About() {
   return (
     <>
+      {/* test */}
+      <Flex>
+        <IndProject></IndProject>
+      </Flex>
+
       {/* Box for About me */}
       <TitleTextImage 
         title='About me'

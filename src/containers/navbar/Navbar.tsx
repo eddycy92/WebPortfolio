@@ -19,7 +19,7 @@ import {
   useColorMode,
   Switch,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from '@chakra-ui/icons';
 import { Logo } from '../../configuration/WebsiteConfig';
 
 interface NavbarProps {
@@ -37,38 +37,46 @@ const Navbar: React.FC<NavbarProps> = ({
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
+        minH={'50px'}
+        py={0}
+        px={4}
         borderBottom={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
+        align={'center'}
+      >
         
         {/* Logo and Heading */}
-        <Flex flex={{ base: 1 }} align="center">
+        <Flex flex={{ base: 1 }} align="center" p={0}>
           <Link href={pageURL} display="flex" alignItems="center">
             <Image src={Logo} alt="Logo" boxSize="40px" mr={2} />
-            <Text fontFamily={'heading'} color={useColorModeValue('gray.800', 'white')}>
+            <Text my="auto" mx={2} fontFamily={'heading'} color={useColorModeValue('gray.800', 'white')}>
               {heading}
             </Text>
           </Link>
         </Flex>
 
         {/* Desktop Navigation Menu */}
-        <Flex display={{ base: 'none', md: 'flex' }} ml="auto" align="center">
+      
+        <Flex display={{ base: 'none', md: 'flex' }} mx={4} align="center">
           <DesktopNav />
-          <Button as="a" variant="link" fontSize="sm" fontWeight={400} href="#" mr={4} ml={20}>
+          {/*<Button as="a" variant="link" fontSize="sm" fontWeight={400} href="#" mr={4} ml={20}>
             Sign In
           </Button>
           <Button as="a" color="white" bg="pink.400" fontSize="sm" fontWeight={600} href="#" _hover={{ bg: 'pink.300' }}>
             Sign Up
-          </Button>
-          <Switch colorScheme="pink" ml={6} isChecked={colorMode === 'dark'} onChange={toggleColorMode} />
+          </Button> */}
+
+          {/* Dark mode Switch*/}
+          <Flex gap={1} align="center">
+            <Icon as={SunIcon} w={5} h={5} color={colorMode === 'light' ? 'yellow.400' : 'gray.500'} ml={10}/>
+            <Switch colorScheme="pink" m={0} isChecked={colorMode === 'dark'} onChange={toggleColorMode} />
+            <Icon as={MoonIcon} w={5} h={5} color={colorMode === 'dark' ? 'blue.400' : 'gray.500'} />
+          </Flex>
         </Flex>
 
         {/* Mobile Menu Toggle */}
-        <Flex flex={{ base: 1, md: 'none' }} justify={'flex-end'}>
+        <Flex display={{ base: 'flex', md: 'none' }} flex={{ base: 1, md: 'none' }} justify={'flex-end'}>
           <IconButton
             onClick={onToggle}
             icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
@@ -143,5 +151,5 @@ const NAV_ITEMS: Array<NavItem> = [
   { label: 'About', href: '/about' },
   { label: 'Projects', href: '/projects' },
   { label: 'Articles', href: '/articles' },
-  { label: 'Guides', href: '/guides' },
+  { label: 'Guides', href: '/comingSoon' },
 ];
