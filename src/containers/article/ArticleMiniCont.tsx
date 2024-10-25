@@ -56,7 +56,7 @@ function ArticleMiniCont() {
             bg="white"
             cursor="pointer"
             _hover={{ bg: "gray.50", transform: "translateY(-5px)" }} // Lift on hover
-            m={2} p={0}
+            m={2} 
           >
             <ArticlePreviewCard
               title={article.title}

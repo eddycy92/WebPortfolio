@@ -119,6 +119,8 @@
     "declarations.d.ts",  // Include your type declarations
     "public/images/**/*.ts",
     "public/images/**/*.tsx",  // Ensure it includes tsx as well
+    "public/images/**/*.json" ,
+    "public/content/**/*.json",
   ],
   
   "exclude": ["node_modules", "dist"]

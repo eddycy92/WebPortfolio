@@ -1,5 +1,7 @@
 // src/themes/Theme.ts
-import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import { border, extendTheme, ThemeConfig } from "@chakra-ui/react";
+import { color } from "framer-motion";
+import { brotliDecompressSync } from "zlib";
 
 // 1. Define custom color palette, typography, etc.
 const colors = {
@@ -73,27 +75,31 @@ const Theme = extendTheme({
 
   components: {
     Flex: {
-      baseStyle: (props: any) => ({
-        m: 0,
+      baseStyle: {
+        m: 4,
         p: 0,
         justifyContent: 'center', // Center content by default
         alignItems: 'center', // Align items to the center
-        gap: 4, // Set default gap between child elements
-        bg: props.colorMode === 'dark' ? 'gray.800' : 'gray.100', // Dynamically set background color based on light/dark mode
-      }),
+        bg: 'teal', // Default background color
+        color: 'white',
+        borderRadius: 2,
+        gap:5,
+      },
       variants: {
-        cardLayout: (props: any) => ({
+        cardLayout: {
           borderRadius: 'md',
           boxShadow: 'lg', // Card-like shadow
+          borderColor:"black",
           p: 6,
-          bg: props.colorMode === 'dark' ? 'gray.700' : 'white', // Different background for light/dark mode
-        }),
-        pageHeader: (props: any) => ({
+          m: 5,
+          bg: 'white',
+        },
+        pageHeader: {
           p: 4,
-          bg: props.colorMode === 'dark' ? 'brand.900' : 'brand.100',
+          bg: 'brand.100',
           borderBottom: '2px solid',
-          borderColor: props.colorMode === 'dark' ? 'brand.500' : 'brand.700',
-        }),
+          borderColor: 'brand.500',
+        },
       },
       sizes: {
         sm: { p: 2, borderRadius: 'sm' },
@@ -104,16 +110,14 @@ const Theme = extendTheme({
         size: 'md', // Default size
       },
     },
-
     Heading: {
-      baseStyle: (props: any) => ({
+      baseStyle: {
         fontWeight: "bold", // All headings will be bold by default
         lineHeight: "1.2", // Tighten up the line height for headings
-        textAlign: 'center',
-        justifyContent: 'center',
+        textAlign:'center',
+        justifyContent:'center',
         alignItems: 'center',
-        color: props.colorMode === 'dark' ? 'gray.50' : 'gray.800', // Color for dark and light mode
-      }),
+      },
       sizes: {
         xxs: { fontSize: "xxs" },
         xs: { fontSize: "xs" },
@@ -131,18 +135,19 @@ const Theme = extendTheme({
         size: "xl", // Default heading size
       },
     },
-  },
+    
 
+  },  
   styles: {
-    global: (props: any) => ({
+    global: {
       "html, body": {
         fontSize: "16px",
-        color: props.colorMode === 'dark' ? 'gray.50' : 'gray.800',
-        bg: props.colorMode === 'dark' ? 'gray.900' : 'gray.50',
+        color: "gray.800",
+        bg: "gray.50",
         lineHeight: "tall",
       },
       a: {
-        color: props.colorMode === 'dark' ? 'teal.300' : 'teal.500',
+        color: "teal.500",
         _hover: {
           textDecoration: "underline",
         },
@@ -150,31 +155,31 @@ const Theme = extendTheme({
       h1: {
         fontSize: "4xl",
         fontWeight: "bold",
-        color: props.colorMode === 'dark' ? 'brand.400' : 'brand.700', // Use your custom brand color
+        color: "brand.700", // Use your custom brand color
         padding: "1rem",
       },
       h2: {
         fontSize: "3xl",
         fontWeight: "semibold",
-        color: props.colorMode === 'dark' ? 'brand.400' : 'brand.700',
+        color: "brand.700",
       },
       h3: {
         fontSize: "2xl",
         fontWeight: "bold",
-        color: props.colorMode === 'dark' ? 'brand.400' : 'brand.700',
+        color: "brand.700",
       },
       h4: {
-        fontSize: "xl", 
+        fontSize: "xl", // Fixed typo: "x1" -> "xl"
         fontWeight: "medium",
-        color: props.colorMode === 'dark' ? 'brand.400' : 'brand.700',
+        color: "brand.700",
       },
       p: {
         fontSize: "md",
-        color: props.colorMode === 'dark' ? 'gray.300' : 'gray.600',
+        color: "gray.600",
         lineHeight: "tall",
         marginBottom: "1rem", // Spacing after paragraphs
       },
-    }),
+    },
   },
 });
 

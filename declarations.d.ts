@@ -28,6 +28,11 @@ declare module '*.svg' {
   export default value;
 }
 
+declare module "*.json" {
+  const value: any;
+  export default value;
+}
+
 // Extend Chakra UI Props globally
 declare module '@chakra-ui/react' {
   export interface ChakraProps {

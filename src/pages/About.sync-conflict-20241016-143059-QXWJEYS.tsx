@@ -1,12 +1,17 @@
 // src/pages/About.tsx
 
 import  {TitleTextImage, }  from '../containers/index';
+import {IndProject,} from '../pages/PagesIndex'
 import {List, ListItem, Text, Box, Heading, Flex   } from '@chakra-ui/react';
-import { IndProject} from "./PagesIndex";
 
 function About() {
   return (
     <>
+      {/* test */}
+      <Flex>
+        <IndProject></IndProject>
+      </Flex>
+
       {/* Box for About me */}
       <TitleTextImage 
         title='About me'

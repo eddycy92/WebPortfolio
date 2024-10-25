@@ -1,10 +1,9 @@
 // src/pages/Projects.tsx
 
 import React, { useEffect, useState } from 'react';
-import { SimpleGrid, Heading, Box, useColorModeValue, Flex } from '@chakra-ui/react';
+import { SimpleGrid, Heading, Box, useColorModeValue } from '@chakra-ui/react';
 import { Helmet } from 'react-helmet';
 import { ProjectCardPlus, SideBar } from '../components/index';
-
 
 interface Project {
   title: string;
@@ -62,8 +61,6 @@ function Projects() {
           content="Explore the projects built using various technologies." />
       </Helmet>
 
-
-
       <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')} display="flex" flexDirection={{ base: 'column', md: 'row' }}>
         {/* Sidebar - pass data and specify the field for filtering */}
         <SideBar
@@ -72,7 +69,7 @@ function Projects() {
           data={projects} // Pass the projects data
           filterField="badges" // Filter based on badges (you can change this to statusOverlay)
         />
-        
+
         {/* Main content section */}
         <Box
           ml={{ base: 0, md: 60 }} // Adjust margin to make room for the sidebar on larger screens
@@ -111,7 +108,6 @@ function Projects() {
           </SimpleGrid>
         </Box>
       </Box>
-
     </>
   );
 }

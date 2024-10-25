@@ -1,11 +1,10 @@
 // /src/App.tsx
 
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ChakraProvider, Spinner } from '@chakra-ui/react';
-import theme from './themes/Theme'; // Import your custom theme
-import {Navbar, Footer} from './containers/index.tsx'; // Import Navbar directly
-
+import { ChakraProvider, Spinner, extendTheme } from '@chakra-ui/react';
+import Theme from './themes/Theme.tsx'; // custom theme
+import {Navbar, Footer} from './containers/index.tsx'; 
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
@@ -16,9 +15,11 @@ const CheatSheets = lazy(() => import('./pages/CheatSheets'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Guides = lazy(() => import('./pages/Guides'));
 
+console.log(extendTheme(Theme)); // Log the final theme to the console
+
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider  theme={Theme}>
       <Router>
         <Navbar heading="Solutioneer" pageURL="/" />  {/* Pass the correct props */}
         <Suspense fallback={<Spinner />}>  {/* Wrap your routes in Suspense for lazy loading */}

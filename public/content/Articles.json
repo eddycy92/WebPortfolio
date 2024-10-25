@@ -1,34 +1,127 @@
 {
-    "Articles": [
+  "Articles": [
+    {
+      "id": 1,
+      "title": "Bug Bounty: A Gateway to Legal Hacking",
+      "published": "10-17-2024",
+      "sections": [
         {
-            "id": 1,
-            "title": "Article 1",
-            "Published": "2021-01-01",
-            "content": "This is the content of Article 1 andalksdnjasd aslkdjlaskdjkedjpwpo osjdp zlxjcpzlcs odaspdoj zxljpclokzkjc poadjp cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0djmf 0sdf0ij sijicj sdjf0iw0ihrfjo ifhosidfpoujdfjasd aslkdjlaskdjkedjpwpo osjdp zlxjcpzlcs odaspdoj zxljpclokzkjc poadjp cpxolzjcpzlxjcpp9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doh faspofhaspodifhaso;dfzp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0djmf 0sdf0ij sijicj sdjf0iw0ihrfjo ifhosihfp[aih faspofhaspodifhaso;dfih "
+          "type": "paragraph",
+          "content": "Bug bounty programs offer a unique opportunity for security professionals to actively improve the security of systems while being rewarded for their discoveries. If you're looking to expand your skill set, participating in bug bounty programs provides hands-on experience in identifying critical vulnerabilities. These programs serve as a gateway to understanding real-world security challenges, while organizations benefit from continuous and cost-effective security assessments."
         },
         {
-            "id": 2,
-            "title": "Article 2",
-            "Published": "2021-01-02",
-            "content": "This is the content of Article 2  cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfpjasd aslkdjlaskdjkedjpwpo osjdp zlxjcpzlcs odaspdoj zxljpclokzkjc poadjp cpxolzjcpzlxjcpdfpoujdfjasd aslkdjlaskdjkedjpwpo osjdp zlxjcpzlcs odaspdoj zxljpclokzkjc poadjp cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvc0d  cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs jpvjpvo pxpc9ojfhosidfpoujdfjasd aslkdjlaskdjkedjpwpo osjdp zlxjcpzlcs odaspdoj zxljpclokzkjc poadjp cpxolzjcpzlxjcpp9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0djmf s0d  cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0d"
+          "type": "image",
+          "src": "/public/images/articles/bugbounty.jpg",
+          "alt": "Bug Bounty Program",
+          "Position": { "row": "1", "column": "2" }
         },
         {
-            "id": 3,
-            "title": "Article 3",
-            "Published": "2021-01-03",
-            "content": "This is the content of Article 3 cx vpoxjvpo pzoj p9ojf p9sjfp zoxcvjpzf9 jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0djmf d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfoighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0d  cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0djmfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0d  cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doh faspofhaspodifhaso;dfih This is the content of Article 1 andalksdnjasd aslkdjlaskdjkedjpwpo osjdp zlxjcpzlcs odaspdoj zxljpclokzkjc poadjp cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp o ighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0djmf s0d  cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfp zoxcv"
+          "type": "subtitle",
+          "content": "What is a Bug Bounty Program?"
         },
         {
-            "id": 4,
-            "title": "Article 4",
-            "Published": "2021-01-04",
-            "content": "This is the content of Article 4  cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfpjasd aslkdjlaskdjkedjpwpo osjdp zlxjcpzlcs odaspdoj zxljpclokzkjc poadjp cpxolzjcpzlxjcpdfpoujdfjasd aslkdjlaskdjkedjpwpo osjdp zlxjcpzlcs odaspdoj zxljpclokzkjc poadjp cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvc0d  cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs jpvjpvo pxpc9ojfhosidfpoujdfjasd aslkdjlaskdjkedjpwpo osjdp zlxjcpzlcs odaspdoj zxljpclokzkjc poadjp cpxolzjcpzlxjcpp9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisd"
+          "type": "paragraph",
+          "content": "You’ve probably heard stories in the news about hackers being villains. The other side of that page is the heroes who don’t get the same attention on the headlines. Bug bounty programs are the legal playgrounds where hackers, dubbed 'ethical hackers' or 'security researchers' can flex their skills, find vulnerabilities, and get rewarded — all without the hassle of black hats or FBI chases."
         },
         {
-            "id": 5,
-            "title": "Article 5",
-            "Published": "2021-01-05",
-            "content": "This is the content of Article 5 cx vpoxjvpo pzoj p9ojf p9sjfp zoxcvjpzf9 jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0djmf d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfoighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0d  cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0djmfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs s0d  cpxolzjcpzlxjcpdfpoujdf pzoxjvcpzojvczp ocjpzoc pojdpoj fpocx vpoxjvpo pzoj p9ojf p9sjfp zoxcvjpzf9d-jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doighoinv osinovidpcopfo mapmcisdvjsoifvn isdfoi jsdpijfs jpvjpvo pxpc9ojvfpsdf9jspoij doifhsiodfhs doh faspofhaspodifhaso;dfih This is the content of Article 1 andalksdnjasd aslkdjlaskdjkedjpwpo osjdp zlxjcpzlcs odaspdoj zxljpclokzkjc p"
+          "type": "paragraph",
+          "content": "A bug bounty program is essentially an invitation for hackers to find security flaws in an organization’s system. Companies lay down the scope (what systems can be hacked) and rules of engagement (no stealing data, obviously). If vulnerabilities or something critical that could lead to data leaks or worse, it is reported to the organization. In exchange, they get paid, often based on the severity of the issue. It's a win-win situation: hackers get legal recognition and compensation, while companies enhance their security without needing to hire an army of full-time testers."
+        },
+        {
+          "type": "subtitle",
+          "content": "What are vulnerabilities?"
+        },
+        {
+          "type": "paragraph",
+          "content": "Vulnerabilities are like weak spots in a suit of armor. Imagine you're wearing a fancy full-body suit, but there’s an exposed zipper in the back — that's a vulnerability. Security Researchers look for these weaknesses in software, systems, and networks, like outdated components, weak access controls, or improper configurations, to mention a few."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Broken Access Control: When users can perform actions they shouldn’t be allowed to. Think guests running the hotel like it’s their personal resort.",
+            "Remote Code Execution (RCE): Where an attacker can run malicious code on the system remotely — basically like having the keys to the kingdom.",
+            "Injection Attacks: Not as fun as they sound. These occur when attackers 'inject' malicious inputs or code into a system, like SQL injection, allowing them to manipulate databases, permissions, and settings."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": "These are just a few examples of the many vulnerabilities that security researchers look for in bug bounty programs. The more severe the vulnerability, the higher the reward. You can visit OWASP’s Top 10 list for more examples of common vulnerabilities."
+        },
+        {
+          "type": "link",
+          "content": "https://owasp.org/www-project-top-ten/"
+        },
+        {
+          "type": "subtitle",
+          "content": "Types of Bug Bounty Programs"
+        },
+        {
+          "type": "paragraph",
+          "content": "Bug bounty programs come in different flavors, each catering to specific needs:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Public Programs: Open to everyone, these programs invite all hackers to find vulnerabilities.",
+            "Private Programs: By invitation only, these programs allow selected researchers to test systems. It's a more controlled environment, often used for sensitive assets, and typically this is done by more experienced individuals or those who have built a reputation.",
+            "Vulnerability Disclosure Programs (VDP): These are like bug bounties but without financial rewards. The goal here is to give the public a safe way to report security issues."
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "How Bug Bounty Programs Benefit Enterprises"
+        },
+        {
+          "type": "paragraph",
+          "content": "For companies, the value of bug bounty programs goes beyond just fixing bugs. By participating in these programs, companies can tap into a global pool of experts. Bug bounty programs bring in diverse, highly skilled security experts who test systems from every possible angle. Rather than paying for expensive security audits or internal testing, bug bounties allow companies to pay for real results — only rewarding valid findings. Companies that openly embrace bug bounty programs show customers and stakeholders they are committed to maintaining a secure environment and not just repeat the famous 'we take security seriously' line."
+        },
+        {
+          "type": "subtitle",
+          "content": "Getting Started: The First Steps in Trying Bug Bounty"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Choose a Platform: Platforms like HackerOne or Bugcrowd offer a range of programs, from beginner-friendly to expert-level.",
+            "Learn the Tools: Familiarize yourself with tools like Burp Suite for web vulnerabilities or Nmap for network scanning.",
+            "Understand the Scope: Always read the rules before you begin. Every bug bounty program has its scope of what can and cannot be tested.",
+            "Start Small: It’s better to start with smaller vulnerabilities (like XSS) before jumping into more complex issues like RCE."
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Article 2",
+      "published": "2021-01-02",
+      "sections": [
+        {
+          "type": "paragraph",
+          "content": "Thasdasdasis is the content of Article 2. Content goes here."
+        },
+        {
+          "type": "paragraph",
+          "content": "Thsadasdasdese are just a few examples of the many vulnerabilities that security researchers look for in bug bounty programs. The more severe the vulnerability, the higher the reward. You can visit OWASP’s Top 10 list for more examples of common vulnerabilities."
+        },
+        {
+          "type": "link",
+          "content": "https://ccsolutioneer.com/"
+        },
+        {
+          "type": "subtitle",
+          "content": "Check"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Caa hooseasd a Platform: Platforms like HackerqweqweadOne or Bugcrowd offer a rangasdwwe of programs, from begisadasnner-friendly to expert-level.",
+            "Le  arndds the Tools: Familiarize yourself witaseqweqwedh tools like Burp Suite for wqweeb vulnerabilities or Nwqeemap for network scanning.",
+            "Unsds derasdstand the Scope: Always read the rules asdbefore you begiools like Burp Subounty program has its scope of what can and cannot be tested.",
+            "Sasd taartasd Small: It’s better to asdqweqwestart with smaller vulnerabilities (qweqwlike XSS) bqweqweefore jumping into more complex issuesqweqwe like RCE.",
+            "Un better to asdqweqwesthe Scope: Always read the rules asdbef Scope: Always read egin. Every bug bounty program has its scope of what can adOne or Bugcrowd e tested."
+          ]
+        }  
+      ]
+    }
+  ]
 }
